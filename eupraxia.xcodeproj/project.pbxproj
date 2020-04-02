@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E920F16A24361F3500F27BA3 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16924361F3500F27BA3 /* Feelings.swift */; };
+		E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16B24361F5B00F27BA3 /* Weather.swift */; };
+		E920F16E2436200200F27BA3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16D2436200200F27BA3 /* Work.swift */; };
+		E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16F243648A900F27BA3 /* SurveyViewModel.swift */; };
+		E920F17224364A7F00F27BA3 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F17124364A7F00F27BA3 /* Survey.swift */; };
+		E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F1742436544000F27BA3 /* UtilsExtensions.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
 		E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */; };
-		E9CC6C8D24360FD300A85495 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8C24360FD300A85495 /* ContentView.swift */; };
 		E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C8E24360FD300A85495 /* Assets.xcassets */; };
 		E9CC6C9224360FD300A85495 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */; };
 		E9CC6C9524360FD300A85495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9324360FD300A85495 /* LaunchScreen.storyboard */; };
+		E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6CA02436113800A85495 /* SurveyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E920F16924361F3500F27BA3 /* Feelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feelings.swift; sourceTree = "<group>"; };
+		E920F16B24361F5B00F27BA3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		E920F16D2436200200F27BA3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		E920F16F243648A900F27BA3 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		E920F17124364A7F00F27BA3 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		E920F1742436544000F27BA3 /* UtilsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtensions.swift; sourceTree = "<group>"; };
 		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC6C8824360FD300A85495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9CC6C8C24360FD300A85495 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9CC6C8E24360FD300A85495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9CC6C9424360FD300A85495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9CC6C9624360FD300A85495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CC6CA02436113800A85495 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E920F173243653F800F27BA3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E920F1742436544000F27BA3 /* UtilsExtensions.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		E9CC6C7C24360FD200A85495 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +79,7 @@
 				E9CC6C9E2436102200A85495 /* models */,
 				E9CC6C9D2436101900A85495 /* viewModels */,
 				E9CC6C9C2436101000A85495 /* views */,
+				E920F173243653F800F27BA3 /* utils */,
 				E9CC6C9F2436105A00A85495 /* supportingFiles */,
 			);
 			path = eupraxia;
@@ -75,7 +96,7 @@
 		E9CC6C9C2436101000A85495 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				E9CC6C8C24360FD300A85495 /* ContentView.swift */,
+				E9CC6CA02436113800A85495 /* SurveyView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -83,6 +104,7 @@
 		E9CC6C9D2436101900A85495 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E920F16F243648A900F27BA3 /* SurveyViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -90,6 +112,10 @@
 		E9CC6C9E2436102200A85495 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				E920F16924361F3500F27BA3 /* Feelings.swift */,
+				E920F16B24361F5B00F27BA3 /* Weather.swift */,
+				E920F16D2436200200F27BA3 /* Work.swift */,
+				E920F17124364A7F00F27BA3 /* Survey.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -178,9 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,
-				E9CC6C8D24360FD300A85495 /* ContentView.swift in Sources */,
+				E920F16E2436200200F27BA3 /* Work.swift in Sources */,
+				E920F16A24361F3500F27BA3 /* Feelings.swift in Sources */,
+				E920F17224364A7F00F27BA3 /* Survey.swift in Sources */,
+				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
+				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
+				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,10 +349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/supportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = XDX42S5M9N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = eupraxia/Info.plist;
+				INFOPLIST_FILE = eupraxia/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,10 +369,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/supportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = XDX42S5M9N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = eupraxia/Info.plist;
+				INFOPLIST_FILE = eupraxia/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
