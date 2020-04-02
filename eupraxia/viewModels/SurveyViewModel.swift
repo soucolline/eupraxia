@@ -27,5 +27,17 @@ final class SurveyViewModel: ObservableObject {
     @Published var breakfastFood = ""
     @Published var lunchFood = ""
     @Published var dinnerFood = ""
+
+    func generateSurvey() -> Survey {
+        Survey(
+            feeling: self.feelings[self.selectedFeeling],
+            weather: self.weather[self.selectedWeather],
+            work: self.work[self.selectedWork],
+            hadSex: self.didHaveSex,
+            breakfast: self.breakfastFood.nilIfEmpty(),
+            lunch: self.lunchFood.nilIfEmpty(),
+            dinner: self.dinnerFood.nilIfEmpty()
+        )
+    }
     
 }

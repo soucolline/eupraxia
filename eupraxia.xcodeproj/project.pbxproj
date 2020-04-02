@@ -11,6 +11,8 @@
 		E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16B24361F5B00F27BA3 /* Weather.swift */; };
 		E920F16E2436200200F27BA3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16D2436200200F27BA3 /* Work.swift */; };
 		E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16F243648A900F27BA3 /* SurveyViewModel.swift */; };
+		E920F17224364A7F00F27BA3 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F17124364A7F00F27BA3 /* Survey.swift */; };
+		E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F1742436544000F27BA3 /* UtilsExtensions.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
 		E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */; };
 		E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C8E24360FD300A85495 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		E920F16B24361F5B00F27BA3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E920F16D2436200200F27BA3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		E920F16F243648A900F27BA3 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		E920F17124364A7F00F27BA3 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		E920F1742436544000F27BA3 /* UtilsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtensions.swift; sourceTree = "<group>"; };
 		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC6C8824360FD300A85495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E920F173243653F800F27BA3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E920F1742436544000F27BA3 /* UtilsExtensions.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		E9CC6C7C24360FD200A85495 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +79,7 @@
 				E9CC6C9E2436102200A85495 /* models */,
 				E9CC6C9D2436101900A85495 /* viewModels */,
 				E9CC6C9C2436101000A85495 /* views */,
+				E920F173243653F800F27BA3 /* utils */,
 				E9CC6C9F2436105A00A85495 /* supportingFiles */,
 			);
 			path = eupraxia;
@@ -102,6 +115,7 @@
 				E920F16924361F3500F27BA3 /* Feelings.swift */,
 				E920F16B24361F5B00F27BA3 /* Weather.swift */,
 				E920F16D2436200200F27BA3 /* Work.swift */,
+				E920F17124364A7F00F27BA3 /* Survey.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -195,7 +209,9 @@
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,
 				E920F16E2436200200F27BA3 /* Work.swift in Sources */,
 				E920F16A24361F3500F27BA3 /* Feelings.swift in Sources */,
+				E920F17224364A7F00F27BA3 /* Survey.swift in Sources */,
 				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
+				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
 				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

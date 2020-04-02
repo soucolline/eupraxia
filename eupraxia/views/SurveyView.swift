@@ -67,11 +67,26 @@ struct SurveyView: View {
                         Text("Did you have sex today ?")
                     }
                 }
+
+                Section {
+                    Button(action: {
+                        let survey = self.viewModel.generateSurvey()
+                        print(survey)
+                    }) {
+                        Text("Validate")
+                    }
+                    .disabled(self.isButtonDisabled())
+                }
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("How was your day ?")
         }
+    }
 
+    func isButtonDisabled() -> Bool {
+        self.viewModel.selectedFeeling == -1 ||
+        self.viewModel.selectedWeather == -1 ||
+        self.viewModel.selectedWeather == -1
     }
 }
 
