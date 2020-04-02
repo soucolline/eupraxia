@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E920F16A24361F3500F27BA3 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16924361F3500F27BA3 /* Feelings.swift */; };
+		E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16B24361F5B00F27BA3 /* Weather.swift */; };
+		E920F16E2436200200F27BA3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16D2436200200F27BA3 /* Work.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
 		E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */; };
 		E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C8E24360FD300A85495 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E920F16924361F3500F27BA3 /* Feelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feelings.swift; sourceTree = "<group>"; };
+		E920F16B24361F5B00F27BA3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		E920F16D2436200200F27BA3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC6C8824360FD300A85495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 		E9CC6C9E2436102200A85495 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				E920F16924361F3500F27BA3 /* Feelings.swift */,
+				E920F16B24361F5B00F27BA3 /* Weather.swift */,
+				E920F16D2436200200F27BA3 /* Work.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -180,7 +189,10 @@
 			files = (
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,
+				E920F16E2436200200F27BA3 /* Work.swift in Sources */,
+				E920F16A24361F3500F27BA3 /* Feelings.swift in Sources */,
 				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
+				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
