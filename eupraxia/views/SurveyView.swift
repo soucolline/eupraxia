@@ -11,6 +11,8 @@ import SwiftUI
 struct SurveyView: View {
 
     private var feelings = ["Very bad", "Bad", "Average", "Good", "Very good"]
+    private var weather = ["Sunny", "Cloudy", "Rainy", "Snowy"]
+    private var work = ["Bad", "Average", "Good", "Did not work"]
 
     @State private var selectedFeeling = -1
     @State private var didEatBreakfast = false
@@ -19,6 +21,9 @@ struct SurveyView: View {
     @State private var lunchFood = ""
     @State private var didEatDinner = false
     @State private var dinnerFood = ""
+    @State private var selectedWeather = -1
+    @State private var selectedWork = -1
+    @State private var didHaveSex = false
 
     var body: some View {
         NavigationView {
@@ -54,6 +59,27 @@ struct SurveyView: View {
                     }
                 }
 
+                Section(header: Text("Weather")) {
+                    Picker(selection: $selectedWeather, label: Text("How was the weather")) {
+                        ForEach(0..<self.weather.count) {
+                            Text(self.weather[$0])
+                        }
+                    }
+                }
+
+                Section(header: Text("Work")) {
+                    Picker(selection: $selectedWork, label: Text("How was work")) {
+                        ForEach(0..<self.work.count) {
+                            Text(self.work[$0])
+                        }
+                    }
+                }
+
+                Section(header: Text("Personal")) {
+                    Toggle(isOn: $didHaveSex) {
+                        Text("Did you have sex today ?")
+                    }
+                }
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("How was your day ?")
