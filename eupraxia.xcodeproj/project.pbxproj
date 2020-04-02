@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
 		E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */; };
-		E9CC6C8D24360FD300A85495 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8C24360FD300A85495 /* ContentView.swift */; };
 		E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C8E24360FD300A85495 /* Assets.xcassets */; };
 		E9CC6C9224360FD300A85495 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */; };
 		E9CC6C9524360FD300A85495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9324360FD300A85495 /* LaunchScreen.storyboard */; };
+		E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6CA02436113800A85495 /* SurveyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC6C8824360FD300A85495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9CC6C8C24360FD300A85495 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9CC6C8E24360FD300A85495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9CC6C9424360FD300A85495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9CC6C9624360FD300A85495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CC6CA02436113800A85495 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		E9CC6C9C2436101000A85495 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				E9CC6C8C24360FD300A85495 /* ContentView.swift */,
+				E9CC6CA02436113800A85495 /* SurveyView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 			files = (
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,
-				E9CC6C8D24360FD300A85495 /* ContentView.swift in Sources */,
+				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,10 +317,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/supportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = XDX42S5M9N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = eupraxia/Info.plist;
+				INFOPLIST_FILE = eupraxia/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,10 +337,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/supportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = XDX42S5M9N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = eupraxia/Info.plist;
+				INFOPLIST_FILE = eupraxia/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
