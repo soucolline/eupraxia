@@ -72,21 +72,23 @@ struct SurveyView: View {
                     Button(action: {
                         let survey = self.viewModel.generateSurvey()
                         print(survey)
+                        self.viewModel.showSuccessAlert = true
                     }) {
                         Text("Validate")
                     }
-                    .disabled(self.isButtonDisabled())
+                    .disabled(self.viewModel.isValidateButtonDisabled())
+                    .alert(isPresented: $viewModel.showSuccessAlert) {
+                        Alert(
+                            title: Text("Success"),
+                            message: Text("Your survey was successfully created"),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
                 }
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("How was your day ?")
         }
-    }
-
-    func isButtonDisabled() -> Bool {
-        self.viewModel.selectedFeeling == -1 ||
-        self.viewModel.selectedWeather == -1 ||
-        self.viewModel.selectedWeather == -1
     }
 }
 

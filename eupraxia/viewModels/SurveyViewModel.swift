@@ -28,6 +28,14 @@ final class SurveyViewModel: ObservableObject {
     @Published var lunchFood = ""
     @Published var dinnerFood = ""
 
+    @Published var showSuccessAlert = false
+
+    func isValidateButtonDisabled() -> Bool {
+        self.selectedFeeling == -1 ||
+        self.selectedWeather == -1 ||
+        self.selectedWork == -1
+    }
+
     func generateSurvey() -> Survey {
         Survey(
             feeling: self.feelings[self.selectedFeeling],
