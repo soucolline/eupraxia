@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E920F16A24361F3500F27BA3 /* Feelings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16924361F3500F27BA3 /* Feelings.swift */; };
+		E920F16A24361F3500F27BA3 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16924361F3500F27BA3 /* Feeling.swift */; };
 		E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16B24361F5B00F27BA3 /* Weather.swift */; };
 		E920F16E2436200200F27BA3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16D2436200200F27BA3 /* Work.swift */; };
 		E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16F243648A900F27BA3 /* SurveyViewModel.swift */; };
-		E920F17224364A7F00F27BA3 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F17124364A7F00F27BA3 /* Survey.swift */; };
 		E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F1742436544000F27BA3 /* UtilsExtensions.swift */; };
+		E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E224373284004BDD1F /* HistoryView.swift */; };
+		E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C224371EA900318C2B /* Model.xcdatamodeld */; };
+		E97AE2C72437230600318C2B /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C52437230600318C2B /* Survey.swift */; };
+		E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C924372AE200318C2B /* TabBarHomeView.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
 		E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */; };
 		E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C8E24360FD300A85495 /* Assets.xcassets */; };
@@ -22,12 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E920F16924361F3500F27BA3 /* Feelings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feelings.swift; sourceTree = "<group>"; };
+		E920F16924361F3500F27BA3 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		E920F16B24361F5B00F27BA3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E920F16D2436200200F27BA3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		E920F16F243648A900F27BA3 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
-		E920F17124364A7F00F27BA3 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		E920F1742436544000F27BA3 /* UtilsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtensions.swift; sourceTree = "<group>"; };
+		E92FB1E224373284004BDD1F /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		E97AE2C324371EA900318C2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E97AE2C52437230600318C2B /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		E97AE2C924372AE200318C2B /* TabBarHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHomeView.swift; sourceTree = "<group>"; };
 		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC6C8824360FD300A85495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				E9CC6CA02436113800A85495 /* SurveyView.swift */,
+				E97AE2C924372AE200318C2B /* TabBarHomeView.swift */,
+				E92FB1E224373284004BDD1F /* HistoryView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -112,10 +120,11 @@
 		E9CC6C9E2436102200A85495 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				E920F16924361F3500F27BA3 /* Feelings.swift */,
+				E920F16924361F3500F27BA3 /* Feeling.swift */,
 				E920F16B24361F5B00F27BA3 /* Weather.swift */,
 				E920F16D2436200200F27BA3 /* Work.swift */,
-				E920F17124364A7F00F27BA3 /* Survey.swift */,
+				E97AE2C52437230600318C2B /* Survey.swift */,
+				E97AE2C224371EA900318C2B /* Model.xcdatamodeld */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -205,12 +214,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
+				E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */,
+				E97AE2C72437230600318C2B /* Survey.swift in Sources */,
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,
 				E920F16E2436200200F27BA3 /* Work.swift in Sources */,
-				E920F16A24361F3500F27BA3 /* Feelings.swift in Sources */,
-				E920F17224364A7F00F27BA3 /* Survey.swift in Sources */,
+				E920F16A24361F3500F27BA3 /* Feeling.swift in Sources */,
 				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
+				E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */,
+				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
 				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
 				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);
@@ -406,6 +418,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E97AE2C224371EA900318C2B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E97AE2C324371EA900318C2B /* Model.xcdatamodel */,
+			);
+			currentVersion = E97AE2C324371EA900318C2B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E9CC6C7D24360FD200A85495 /* Project object */;
 }
