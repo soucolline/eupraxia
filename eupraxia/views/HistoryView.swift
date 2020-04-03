@@ -7,14 +7,15 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HistoryView: View {
+    @FetchRequest(entity: Survey.entity(), sortDescriptors: []) var surveys: FetchedResults<Survey>
+
     var body: some View {
         NavigationView {
-            List {
-                ForEach(0...10, id: \.self) { _ in
-                    Text("Fake data")
-                }
+            List(surveys, id: \.self) { (survey: Survey) in
+                Text("Fake data")
             }
             .navigationBarTitle("History")
         }
@@ -23,6 +24,7 @@ struct HistoryView: View {
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        return HistoryView().environment(\.managedObjectContext, context)
     }
 }

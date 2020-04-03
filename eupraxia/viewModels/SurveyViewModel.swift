@@ -43,8 +43,8 @@ final class SurveyViewModel: ObservableObject {
         self.selectedWork == -1
     }
 
-    func generateSurvey() -> Survey {
-        Survey(
+    func generateSurvey() {
+        let survey = Survey(
             feeling: self.feelings[self.selectedFeeling],
             weather: self.weather[self.selectedWeather],
             work: self.work[self.selectedWork],
@@ -54,6 +54,12 @@ final class SurveyViewModel: ObservableObject {
             dinner: self.dinnerFood.nilIfEmpty(),
             in: self.context
         )
+
+        do {
+            try survey.managedObjectContext?.save()
+        } catch {
+            fatalError("could not save survey")
+        }
     }
     
 }

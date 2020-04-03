@@ -43,4 +43,8 @@ public class Survey: NSManagedObject {
         self.lunch = lunch
         self.dinner = dinner
     }
+
+    public override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
 }

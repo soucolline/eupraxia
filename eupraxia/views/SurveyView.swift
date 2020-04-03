@@ -70,8 +70,7 @@ struct SurveyView: View {
 
                 Section {
                     Button(action: {
-                        let survey = self.viewModel.generateSurvey()
-                        print(survey)
+                        self.viewModel.generateSurvey()
                         self.viewModel.showSuccessAlert = true
                     }) {
                         Text("Validate")
