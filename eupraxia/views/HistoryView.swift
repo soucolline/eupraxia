@@ -13,11 +13,6 @@ struct HistoryView: View {
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     @FetchRequest(entity: Survey.entity(), sortDescriptors: []) var surveys: FetchedResults<Survey>
 
-    init() {
-        UITableView.appearance().tableFooterView = UIView()
-        UITableView.appearance().separatorStyle = .none
-    }
-
     var body: some View {
         NavigationView {
             List {
@@ -28,6 +23,8 @@ struct HistoryView: View {
             }
             .navigationBarTitle("History")
             .navigationBarItems(trailing: EditButton())
+            .onAppear { UITableView.appearance().separatorStyle = .none }
+            .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
         }
     }
 
@@ -48,12 +45,7 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let survey = Survey(context: context)
-        survey.id = UUID()
-        survey.feeling = 1
-        survey.weather = 1
-        survey.work = 1
-        survey.lunch = "My lunch"
+        _ = Survey.createTestSurvey(from: context)
         return HistoryView().environment(\.managedObjectContext, context)
     }
 }

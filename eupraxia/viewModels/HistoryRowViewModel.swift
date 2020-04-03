@@ -12,12 +12,18 @@ final class HistoryRowViewModel: ObservableObject {
 
     private let survey: Survey
 
+    lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMM d, yyyy"
+        return formatter
+    }()
+
     init(with survey: Survey) {
         self.survey = survey
     }
 
-    func getUUID() -> String {
-        self.survey.id.uuidString
+    func getDate() -> String {
+        self.dateFormatter.string(from: self.survey.date)
     }
 
     func getFeeling() -> String {

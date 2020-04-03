@@ -15,9 +15,11 @@ struct HistoryRow: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(self.viewModel.getUUID())
+                Text(self.viewModel.getDate())
+                    .bold()
                     .lineLimit(1)
                     .foregroundColor(.black)
+                    .padding(.bottom)
                 Text("Feelings: \(self.viewModel.getFeeling())")
                     .lineLimit(1)
                     .foregroundColor(.black)
@@ -67,12 +69,7 @@ struct HistoryRow: View {
 struct HistoryRow_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let survey = Survey(context: context)
-        survey.id = UUID()
-        survey.feeling = 1
-        survey.weather = 1
-        survey.work = 1
-        survey.lunch = "My lunch"
+        let survey = Survey.createTestSurvey(from: context)
         return HistoryRow(viewModel: HistoryRowViewModel(with: survey))
     }
 }
