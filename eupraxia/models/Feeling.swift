@@ -1,5 +1,5 @@
 //
-//  Work.swift
+//  Feelings.swift
 //  eupraxia
 //
 //  Created by Thomas Guilleminot on 02/04/2020.
@@ -8,18 +8,20 @@
 
 import Foundation
 
-enum Work: Int16, CaseIterable {
-    case bad = 0
+enum Feeling: Int16, CaseIterable {
+    case veryBad = 0
+    case bad
     case average
     case good
-    case didNotWork
+    case veryGood
 
     var label: String {
         switch self {
+        case .veryBad: return "Very bad"
         case .bad: return "Bad"
         case .average: return "Average"
         case .good: return "Good"
-        case .didNotWork: return "Did not work"
+        case .veryGood: return "Very good"
         }
     }
 }

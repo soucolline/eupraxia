@@ -8,10 +8,19 @@
 
 import Foundation
 
-enum Weather: String, CaseIterable {
-    case sunny = "Sunny"
-    case cloudy = "Cloudy"
-    case rainy = "Rainy"
-    case snowy = "Snowy"
+enum Weather: Int16, CaseIterable {
+    case sunny = 0
+    case cloudy
+    case rainy
+    case snowy
+
+    var label: String {
+        switch self {
+        case .sunny: return "Sunny"
+        case .cloudy: return "Cloudy"
+        case .rainy: return "Rainy"
+        case .snowy: return "Snowy"
+        }
+    }
 }
 

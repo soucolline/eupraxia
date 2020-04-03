@@ -18,7 +18,7 @@ struct SurveyView: View {
                 Section(header: Text("General")) {
                     Picker(selection: $viewModel.selectedFeeling, label: Text("How did you feel")) {
                         ForEach(0..<self.viewModel.feelings.count) {
-                            Text(self.viewModel.feelings[$0].rawValue)
+                            Text(self.viewModel.feelings[$0].label)
                         }
                     }
                 }
@@ -49,7 +49,7 @@ struct SurveyView: View {
                 Section(header: Text("Weather")) {
                     Picker(selection: $viewModel.selectedWeather, label: Text("How was the weather")) {
                         ForEach(0..<self.viewModel.weather.count) {
-                            Text(self.viewModel.weather[$0].rawValue)
+                            Text(self.viewModel.weather[$0].label)
                         }
                     }
                 }
@@ -57,7 +57,7 @@ struct SurveyView: View {
                 Section(header: Text("Work")) {
                     Picker(selection: $viewModel.selectedWork, label: Text("How was work")) {
                         ForEach(0..<self.viewModel.work.count) {
-                            Text(self.viewModel.work[$0].rawValue)
+                            Text(self.viewModel.work[$0].label)
                         }
                     }
                 }
@@ -94,6 +94,7 @@ struct SurveyView: View {
 
 struct SurveyView_Previews: PreviewProvider {
     static var previews: some View {
-        SurveyView(viewModel: SurveyViewModel())
+        let previewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        return SurveyView(viewModel: SurveyViewModel(with: previewContext))
     }
 }

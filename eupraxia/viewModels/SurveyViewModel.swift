@@ -8,10 +8,13 @@
 
 import Foundation
 import Combine
+import CoreData
 
 final class SurveyViewModel: ObservableObject {
 
-    let feelings = Feelings.allCases
+    private let context: NSManagedObjectContext
+
+    let feelings = Feeling.allCases
     let weather = Weather.allCases
     let work = Work.allCases
 
@@ -30,6 +33,10 @@ final class SurveyViewModel: ObservableObject {
 
     @Published var showSuccessAlert = false
 
+    init(with context: NSManagedObjectContext) {
+        self.context = context
+    }
+
     func isValidateButtonDisabled() -> Bool {
         self.selectedFeeling == -1 ||
         self.selectedWeather == -1 ||
@@ -44,7 +51,8 @@ final class SurveyViewModel: ObservableObject {
             hadSex: self.didHaveSex,
             breakfast: self.breakfastFood.nilIfEmpty(),
             lunch: self.lunchFood.nilIfEmpty(),
-            dinner: self.dinnerFood.nilIfEmpty()
+            dinner: self.dinnerFood.nilIfEmpty(),
+            in: self.context
         )
     }
     
