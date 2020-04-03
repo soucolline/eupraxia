@@ -18,7 +18,13 @@ struct TabBarHomeView: View {
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Survey")
-            }
+                }
+
+            HistoryView()
+                .tabItem {
+                    Image(systemName: "clock")
+                    Text("History")
+                }
         }
     }
 }
