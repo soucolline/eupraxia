@@ -16,6 +16,7 @@ public class Survey: NSManagedObject {
         return NSFetchRequest<Survey>(entityName: "Survey")
     }
 
+    @NSManaged public var id: UUID
     @NSManaged public var breakfast: String?
     @NSManaged public var dinner: String?
     @NSManaged public var feeling: Int16
@@ -35,6 +36,7 @@ public class Survey: NSManagedObject {
         in context: NSManagedObjectContext
     ) {
         super.init(entity: Self.entity(), insertInto: context)
+        self.id = UUID()
         self.feeling = feeling.rawValue
         self.weather = weather.rawValue
         self.work = work.rawValue

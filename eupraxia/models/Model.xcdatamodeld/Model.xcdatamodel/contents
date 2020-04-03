@@ -5,11 +5,12 @@
         <attribute name="dinner" optional="YES" attributeType="String"/>
         <attribute name="feeling" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="hadSex" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lunch" optional="YES" attributeType="String"/>
         <attribute name="weather" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
         <attribute name="work" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Survey" positionX="-54" positionY="-9" width="128" height="148"/>
+        <element name="Survey" positionX="-54" positionY="-9" width="128" height="163"/>
     </elements>
 </model>
