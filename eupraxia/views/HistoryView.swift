@@ -10,14 +10,32 @@ import SwiftUI
 import CoreData
 
 struct HistoryView: View {
+    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     @FetchRequest(entity: Survey.entity(), sortDescriptors: []) var surveys: FetchedResults<Survey>
 
     var body: some View {
         NavigationView {
-            List(surveys, id: \.self) { (survey: Survey) in
-                Text("Fake data")
+            List {
+                ForEach(surveys, id: \.self) { (survey: Survey) in
+                    Text("Fake data")
+                }
+                .onDelete(perform: delete)
             }
             .navigationBarTitle("History")
+            .navigationBarItems(trailing: EditButton())
+        }
+    }
+
+    func delete(at offset: IndexSet) {
+        for index in offset {
+            let survey = self.surveys[index]
+            self.context.delete(survey)
+        }
+
+        do {
+            try self.context.save()
+        } catch {
+            fatalError("couldn't save context after deletion")
         }
     }
 }

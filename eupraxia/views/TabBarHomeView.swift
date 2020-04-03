@@ -10,7 +10,7 @@ import SwiftUI
 import CoreData
 
 struct TabBarHomeView: View {
-    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+    @Environment(\.managedObjectContext) var context
 
     var body: some View {
         TabView {
