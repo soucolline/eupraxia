@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             fatalError("Unable to read managed object context.")
         }
 
-        let contentView = SurveyView(viewModel: SurveyViewModel(with: context)).environment(\.managedObjectContext, context)
+        let contentView = TabBarHomeView().environment(\.managedObjectContext, context)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
