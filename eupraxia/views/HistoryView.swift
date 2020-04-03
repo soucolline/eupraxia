@@ -16,13 +16,15 @@ struct HistoryView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(surveys, id: \.self) { (survey: Survey) in
-                    Text("Fake data")
+                ForEach(surveys, id: \.id) { (survey: Survey) in
+                    HistoryRow(viewModel: HistoryRowViewModel(with: survey))
                 }
                 .onDelete(perform: delete)
             }
             .navigationBarTitle("History")
             .navigationBarItems(trailing: EditButton())
+            .onAppear { UITableView.appearance().separatorStyle = .none }
+            .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
         }
     }
 
@@ -43,6 +45,7 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        _ = Survey.createTestSurvey(from: context)
         return HistoryView().environment(\.managedObjectContext, context)
     }
 }

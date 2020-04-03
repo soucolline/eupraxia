@@ -13,3 +13,11 @@ extension String {
         self.isEmpty ? nil : self
     }
 }
+
+extension Optional where Wrapped == String {
+    func isEmptyOrNil() -> Bool {
+        guard let self = self else { return true }
+
+        return self.isEmpty
+    }
+}

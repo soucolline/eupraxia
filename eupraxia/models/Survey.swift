@@ -16,6 +16,8 @@ public class Survey: NSManagedObject {
         return NSFetchRequest<Survey>(entityName: "Survey")
     }
 
+    @NSManaged public var id: UUID
+    @NSManaged public var date: Date
     @NSManaged public var breakfast: String?
     @NSManaged public var dinner: String?
     @NSManaged public var feeling: Int16
@@ -35,6 +37,8 @@ public class Survey: NSManagedObject {
         in context: NSManagedObjectContext
     ) {
         super.init(entity: Self.entity(), insertInto: context)
+        self.id = UUID()
+        self.date = Date()
         self.feeling = feeling.rawValue
         self.weather = weather.rawValue
         self.work = work.rawValue
@@ -46,5 +50,19 @@ public class Survey: NSManagedObject {
 
     public override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
         super.init(entity: entity, insertInto: context)
+    }
+}
+
+extension Survey {
+    static func createTestSurvey(from context: NSManagedObjectContext) -> Survey {
+        let survey = Survey(context: context)
+        survey.id = UUID()
+        survey.date = Date()
+        survey.feeling = 1
+        survey.weather = 1
+        survey.work = 1
+        survey.lunch = "My lunch"
+
+        return survey
     }
 }
