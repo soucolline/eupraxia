@@ -7,23 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E920F16A24361F3500F27BA3 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16924361F3500F27BA3 /* Feeling.swift */; };
+		E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16B24361F5B00F27BA3 /* Weather.swift */; };
+		E920F16E2436200200F27BA3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16D2436200200F27BA3 /* Work.swift */; };
+		E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F16F243648A900F27BA3 /* SurveyViewModel.swift */; };
+		E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E920F1742436544000F27BA3 /* UtilsExtensions.swift */; };
+		E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E224373284004BDD1F /* HistoryView.swift */; };
+		E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E424376A85004BDD1F /* HistoryRow.swift */; };
+		E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */; };
+		E92FB1EB2437709E004BDD1F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92FB1EA2437709E004BDD1F /* Colors.xcassets */; };
+		E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C224371EA900318C2B /* Model.xcdatamodeld */; };
+		E97AE2C72437230600318C2B /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C52437230600318C2B /* Survey.swift */; };
+		E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C924372AE200318C2B /* TabBarHomeView.swift */; };
+		E9B33F102439121D00111B80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F0F2439121D00111B80 /* SettingsView.swift */; };
+		E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */; };
+		E9B33F16243916C400111B80 /* UserDefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */; };
+		E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F1724391AA300111B80 /* SettingsViewModel.swift */; };
+		E9B33F1A2439210E00111B80 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F192439210E00111B80 /* NotificationsManager.swift */; };
+		E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A24F24388E3900904AA4 /* DetailsView.swift */; };
+		E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
 		E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */; };
-		E9CC6C8D24360FD300A85495 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8C24360FD300A85495 /* ContentView.swift */; };
 		E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C8E24360FD300A85495 /* Assets.xcassets */; };
 		E9CC6C9224360FD300A85495 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */; };
 		E9CC6C9524360FD300A85495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9324360FD300A85495 /* LaunchScreen.storyboard */; };
+		E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6CA02436113800A85495 /* SurveyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E920F16924361F3500F27BA3 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
+		E920F16B24361F5B00F27BA3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		E920F16D2436200200F27BA3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		E920F16F243648A900F27BA3 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		E920F1742436544000F27BA3 /* UtilsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtensions.swift; sourceTree = "<group>"; };
+		E92FB1E224373284004BDD1F /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		E92FB1E424376A85004BDD1F /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
+		E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowViewModel.swift; sourceTree = "<group>"; };
+		E92FB1EA2437709E004BDD1F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E97AE2C324371EA900318C2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E97AE2C52437230600318C2B /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		E97AE2C924372AE200318C2B /* TabBarHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHomeView.swift; sourceTree = "<group>"; };
+		E9B33F0F2439121D00111B80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
+		E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfig.swift; sourceTree = "<group>"; };
+		E9B33F1724391AA300111B80 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E9B33F192439210E00111B80 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		E9B5A24F24388E3900904AA4 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E9CC6C8524360FD200A85495 /* Eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC6C8824360FD300A85495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9CC6C8C24360FD300A85495 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9CC6C8E24360FD300A85495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9CC6C9424360FD300A85495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9CC6C9624360FD300A85495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CC6CA02436113800A85495 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E920F173243653F800F27BA3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E920F1742436544000F27BA3 /* UtilsExtensions.swift */,
+				E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */,
+				E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */,
+				E9B33F192439210E00111B80 /* NotificationsManager.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		E9CC6C7C24360FD200A85495 = {
 			isa = PBXGroup;
 			children = (
@@ -48,7 +97,7 @@
 		E9CC6C8624360FD200A85495 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9CC6C8524360FD200A85495 /* eupraxia.app */,
+				E9CC6C8524360FD200A85495 /* Eupraxia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,13 +105,11 @@
 		E9CC6C8724360FD200A85495 /* eupraxia */ = {
 			isa = PBXGroup;
 			children = (
-				E9CC6C8824360FD300A85495 /* AppDelegate.swift */,
-				E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */,
-				E9CC6C8C24360FD300A85495 /* ContentView.swift */,
-				E9CC6C8E24360FD300A85495 /* Assets.xcassets */,
-				E9CC6C9324360FD300A85495 /* LaunchScreen.storyboard */,
-				E9CC6C9624360FD300A85495 /* Info.plist */,
-				E9CC6C9024360FD300A85495 /* Preview Content */,
+				E9CC6C9E2436102200A85495 /* models */,
+				E9CC6C9D2436101900A85495 /* viewModels */,
+				E9CC6C9C2436101000A85495 /* views */,
+				E920F173243653F800F27BA3 /* utils */,
+				E9CC6C9F2436105A00A85495 /* supportingFiles */,
 			);
 			path = eupraxia;
 			sourceTree = "<group>";
@@ -73,6 +120,56 @@
 				E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9CC6C9C2436101000A85495 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E9CC6CA02436113800A85495 /* SurveyView.swift */,
+				E97AE2C924372AE200318C2B /* TabBarHomeView.swift */,
+				E92FB1E224373284004BDD1F /* HistoryView.swift */,
+				E92FB1E424376A85004BDD1F /* HistoryRow.swift */,
+				E9B5A24F24388E3900904AA4 /* DetailsView.swift */,
+				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		E9CC6C9D2436101900A85495 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E920F16F243648A900F27BA3 /* SurveyViewModel.swift */,
+				E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */,
+				E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */,
+				E9B33F1724391AA300111B80 /* SettingsViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		E9CC6C9E2436102200A85495 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E920F16924361F3500F27BA3 /* Feeling.swift */,
+				E920F16B24361F5B00F27BA3 /* Weather.swift */,
+				E920F16D2436200200F27BA3 /* Work.swift */,
+				E97AE2C52437230600318C2B /* Survey.swift */,
+				E97AE2C224371EA900318C2B /* Model.xcdatamodeld */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		E9CC6C9F2436105A00A85495 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E9CC6C8824360FD300A85495 /* AppDelegate.swift */,
+				E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */,
+				E9CC6C9324360FD300A85495 /* LaunchScreen.storyboard */,
+				E9CC6C9624360FD300A85495 /* Info.plist */,
+				E9CC6C8E24360FD300A85495 /* Assets.xcassets */,
+				E92FB1EA2437709E004BDD1F /* Colors.xcassets */,
+				E9CC6C9024360FD300A85495 /* Preview Content */,
+			);
+			path = supportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,7 +189,7 @@
 			);
 			name = eupraxia;
 			productName = eupraxia;
-			productReference = E9CC6C8524360FD200A85495 /* eupraxia.app */;
+			productReference = E9CC6C8524360FD200A85495 /* Eupraxia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CC6C9524360FD300A85495 /* LaunchScreen.storyboard in Resources */,
+				E92FB1EB2437709E004BDD1F /* Colors.xcassets in Resources */,
 				E9CC6C9224360FD300A85495 /* Preview Assets.xcassets in Resources */,
 				E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */,
 			);
@@ -146,9 +244,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */,
+				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
+				E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */,
+				E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */,
+				E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */,
+				E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */,
+				E9B33F102439121D00111B80 /* SettingsView.swift in Sources */,
+				E97AE2C72437230600318C2B /* Survey.swift in Sources */,
+				E9B33F1A2439210E00111B80 /* NotificationsManager.swift in Sources */,
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
+				E9B33F16243916C400111B80 /* UserDefaultsConfig.swift in Sources */,
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,
-				E9CC6C8D24360FD300A85495 /* ContentView.swift in Sources */,
+				E920F16E2436200200F27BA3 /* Work.swift in Sources */,
+				E920F16A24361F3500F27BA3 /* Feeling.swift in Sources */,
+				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
+				E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */,
+				E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */,
+				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
+				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
+				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
+				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,18 +401,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/supportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = XDX42S5M9N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = eupraxia/Info.plist;
+				INFOPLIST_FILE = eupraxia/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlatan.eupraxia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eupraxia;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,18 +423,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"eupraxia/supportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = XDX42S5M9N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = eupraxia/Info.plist;
+				INFOPLIST_FILE = eupraxia/supportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlatan.eupraxia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eupraxia;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +462,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E97AE2C224371EA900318C2B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E97AE2C324371EA900318C2B /* Model.xcdatamodel */,
+			);
+			currentVersion = E97AE2C324371EA900318C2B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E9CC6C7D24360FD200A85495 /* Project object */;
 }
