@@ -25,6 +25,12 @@ struct TabBarHomeView: View {
                     Image(systemName: "clock")
                     Text("History")
                 }
+
+            SettingsView(viewModel: SettingsViewModel())
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+                }
         }
     }
 }

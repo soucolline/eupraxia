@@ -19,6 +19,10 @@
 		E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C224371EA900318C2B /* Model.xcdatamodeld */; };
 		E97AE2C72437230600318C2B /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C52437230600318C2B /* Survey.swift */; };
 		E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C924372AE200318C2B /* TabBarHomeView.swift */; };
+		E9B33F102439121D00111B80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F0F2439121D00111B80 /* SettingsView.swift */; };
+		E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */; };
+		E9B33F16243916C400111B80 /* UserDefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */; };
+		E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F1724391AA300111B80 /* SettingsViewModel.swift */; };
 		E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A24F24388E3900904AA4 /* DetailsView.swift */; };
 		E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
@@ -42,6 +46,10 @@
 		E97AE2C324371EA900318C2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E97AE2C52437230600318C2B /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		E97AE2C924372AE200318C2B /* TabBarHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHomeView.swift; sourceTree = "<group>"; };
+		E9B33F0F2439121D00111B80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
+		E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfig.swift; sourceTree = "<group>"; };
+		E9B33F1724391AA300111B80 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		E9B5A24F24388E3900904AA4 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				E920F1742436544000F27BA3 /* UtilsExtensions.swift */,
+				E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */,
+				E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -117,6 +127,7 @@
 				E92FB1E224373284004BDD1F /* HistoryView.swift */,
 				E92FB1E424376A85004BDD1F /* HistoryRow.swift */,
 				E9B5A24F24388E3900904AA4 /* DetailsView.swift */,
+				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -127,6 +138,7 @@
 				E920F16F243648A900F27BA3 /* SurveyViewModel.swift */,
 				E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */,
 				E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */,
+				E9B33F1724391AA300111B80 /* SettingsViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -234,13 +246,17 @@
 				E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */,
 				E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */,
 				E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */,
+				E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */,
+				E9B33F102439121D00111B80 /* SettingsView.swift in Sources */,
 				E97AE2C72437230600318C2B /* Survey.swift in Sources */,
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
+				E9B33F16243916C400111B80 /* UserDefaultsConfig.swift in Sources */,
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,
 				E920F16E2436200200F27BA3 /* Work.swift in Sources */,
 				E920F16A24361F3500F27BA3 /* Feeling.swift in Sources */,
 				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
 				E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */,
+				E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */,
 				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
 				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
 				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
