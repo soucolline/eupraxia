@@ -20,7 +20,12 @@ struct HistoryView: View {
         NavigationView {
             List {
                 ForEach(surveys, id: \.id) { (survey: Survey) in
-                    HistoryRow(viewModel: HistoryRowViewModel(with: survey))
+                    ZStack {
+                        HistoryRow(viewModel: HistoryRowViewModel(with: survey))
+                        NavigationLink(destination: DetailsView(viewModel: DetailsViewModel(with: survey))) {
+                            EmptyView()
+                        }
+                    }
                 }
                 .onDelete(perform: delete)
             }
