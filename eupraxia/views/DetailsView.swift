@@ -12,27 +12,24 @@ struct DetailsView: View {
     @ObservedObject var viewModel: DetailsViewModel
 
     var body: some View {
-        NavigationView {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Feeling : \(viewModel.getFeeling())")
-                    Text("Breakfast : \(viewModel.getBreakFast())")
-                    Text("Lunch : \(viewModel.getLunch())")
-                    Text("Dinner : \(viewModel.getDinner())")
-                    Text("Weather : \(viewModel.getWeather())")
-                    Text("Work : \(viewModel.getWork())")
-                    Text("Sex : \(viewModel.getDidHaveSex())")
-                    Text("Stomach ache : \(viewModel.getDidHaveStomachAche())")
-
-                    Spacer()
-                }
-                .padding()
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Feeling : \(viewModel.getFeeling())")
+                Text("Breakfast : \(viewModel.getBreakFast())")
+                Text("Lunch : \(viewModel.getLunch())")
+                Text("Dinner : \(viewModel.getDinner())")
+                Text("Weather : \(viewModel.getWeather())")
+                Text("Work : \(viewModel.getWork())")
+                Text("Sex : \(viewModel.getDidHaveSex())")
+                Text("Stomach ache : \(viewModel.getDidHaveStomachAche())")
 
                 Spacer()
             }
-            .navigationBarTitle(viewModel.getDate())
-        }
+            .padding()
 
+            Spacer()
+        }
+        .navigationBarTitle(Text(viewModel.getDate()), displayMode: .inline)
     }
 }
 
