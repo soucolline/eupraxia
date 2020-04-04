@@ -18,6 +18,7 @@ final class SurveyViewModel: ObservableObject {
     let weather = Weather.allCases
     let work = Work.allCases
 
+    @Published var surveyDate = Date()
     @Published var selectedFeeling = -1
     @Published var selectedWeather = -1
     @Published var selectedWork = -1
@@ -26,6 +27,7 @@ final class SurveyViewModel: ObservableObject {
     @Published var didEatDinner = false
     @Published var didEatLunch = false
     @Published var didHaveSex = false
+    @Published var didHaveStomachAche = false
 
     @Published var breakfastFood = ""
     @Published var lunchFood = ""
@@ -45,10 +47,12 @@ final class SurveyViewModel: ObservableObject {
 
     func generateSurvey() {
         let survey = Survey(
+            date: self.surveyDate,
             feeling: self.feelings[self.selectedFeeling],
             weather: self.weather[self.selectedWeather],
             work: self.work[self.selectedWork],
             hadSex: self.didHaveSex,
+            hadStomachAche: self.didHaveStomachAche,
             breakfast: self.breakfastFood.nilIfEmpty(),
             lunch: self.lunchFood.nilIfEmpty(),
             dinner: self.dinnerFood.nilIfEmpty(),

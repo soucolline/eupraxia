@@ -18,19 +18,22 @@ public class Survey: NSManagedObject {
 
     @NSManaged public var id: UUID
     @NSManaged public var date: Date
-    @NSManaged public var breakfast: String?
-    @NSManaged public var dinner: String?
     @NSManaged public var feeling: Int16
-    @NSManaged public var hadSex: Bool
+    @NSManaged public var breakfast: String?
     @NSManaged public var lunch: String?
+    @NSManaged public var dinner: String?
+    @NSManaged public var hadSex: Bool
+    @NSManaged public var hadStomachAche: Bool
     @NSManaged public var weather: Int16
     @NSManaged public var work: Int16
 
     init(
+        date: Date,
         feeling: Feeling,
         weather: Weather,
         work: Work,
         hadSex: Bool,
+        hadStomachAche: Bool,
         breakfast: String?,
         lunch: String?,
         dinner: String?,
@@ -38,11 +41,12 @@ public class Survey: NSManagedObject {
     ) {
         super.init(entity: Self.entity(), insertInto: context)
         self.id = UUID()
-        self.date = Date()
+        self.date = date
         self.feeling = feeling.rawValue
         self.weather = weather.rawValue
         self.work = work.rawValue
         self.hadSex = hadSex
+        self.hadStomachAche = hadStomachAche
         self.breakfast = breakfast
         self.lunch = lunch
         self.dinner = dinner

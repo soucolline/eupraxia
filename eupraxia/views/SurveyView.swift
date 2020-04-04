@@ -21,6 +21,10 @@ struct SurveyView: View {
                             Text(self.viewModel.feelings[$0].label)
                         }
                     }
+
+                    DatePicker(selection: $viewModel.surveyDate, in: ...Date(), displayedComponents: .date) {
+                        Text("Select a date")
+                    }
                 }
 
                 Section(header: Text("Food")) {
@@ -65,6 +69,10 @@ struct SurveyView: View {
                 Section(header: Text("Personal")) {
                     Toggle(isOn: $viewModel.didHaveSex) {
                         Text("Did you have sex today ?")
+                    }
+
+                    Toggle(isOn: $viewModel.didHaveStomachAche) {
+                        Text("Did you have a stomach ache today ?")
                     }
                 }
 

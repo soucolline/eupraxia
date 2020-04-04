@@ -11,7 +11,10 @@ import CoreData
 
 struct HistoryView: View {
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
-    @FetchRequest(entity: Survey.entity(), sortDescriptors: []) var surveys: FetchedResults<Survey>
+    @FetchRequest(
+        entity: Survey.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Survey.date, ascending: true)]
+    ) var surveys: FetchedResults<Survey>
 
     var body: some View {
         NavigationView {
