@@ -23,6 +23,7 @@
 		E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */; };
 		E9B33F16243916C400111B80 /* UserDefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */; };
 		E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F1724391AA300111B80 /* SettingsViewModel.swift */; };
+		E9B33F1A2439210E00111B80 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F192439210E00111B80 /* NotificationsManager.swift */; };
 		E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A24F24388E3900904AA4 /* DetailsView.swift */; };
 		E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfig.swift; sourceTree = "<group>"; };
 		E9B33F1724391AA300111B80 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E9B33F192439210E00111B80 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		E9B5A24F24388E3900904AA4 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E9CC6C8524360FD200A85495 /* eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 				E920F1742436544000F27BA3 /* UtilsExtensions.swift */,
 				E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */,
 				E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */,
+				E9B33F192439210E00111B80 /* NotificationsManager.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */,
 				E9B33F102439121D00111B80 /* SettingsView.swift in Sources */,
 				E97AE2C72437230600318C2B /* Survey.swift in Sources */,
+				E9B33F1A2439210E00111B80 /* NotificationsManager.swift in Sources */,
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
 				E9B33F16243916C400111B80 /* UserDefaultsConfig.swift in Sources */,
 				E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */,

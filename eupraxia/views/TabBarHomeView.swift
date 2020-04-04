@@ -26,7 +26,7 @@ struct TabBarHomeView: View {
                     Text("History")
                 }
 
-            SettingsView(viewModel: SettingsViewModel())
+            SettingsView(viewModel: SettingsViewModel(with: NotificationsManager(with: UNUserNotificationCenter.current())))
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")
