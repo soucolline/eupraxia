@@ -15,6 +15,20 @@ struct K {
         static let openSansSemiBold = "OpenSans-SemiBold"
         static let openSansBold = "OpenSans-Bold"
     }
+
+    struct Icons {
+        static let done = "ic_done"
+        static let error = "ic_error"
+        static let moodAverage = "ic_mood_average"
+        static let moodBad = "ic_mood_bad"
+        static let moodGood = "ic_mood_good"
+        static let moodVeryBad = "ic_mood_very_bad"
+        static let weatherSunny = "ic_weather_sunny"
+        static let weatherCloudy = "ic_weather_cloudy"
+        static let weatherRainy = "ic_weather_rainy"
+        static let workDisabled = "ic_work_disabled"
+        static let work = "ic_work_universal"
+    }
 }
 
 extension Color {
