@@ -13,7 +13,6 @@ enum Feeling: Int16, CaseIterable {
     case bad
     case average
     case good
-    case veryGood
 
     var label: String {
         switch self {
@@ -21,7 +20,6 @@ enum Feeling: Int16, CaseIterable {
         case .bad: return "Bad"
         case .average: return "Average"
         case .good: return "Good"
-        case .veryGood: return "Very good"
         }
     }
 }

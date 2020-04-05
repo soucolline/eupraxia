@@ -26,8 +26,12 @@ struct K {
         static let weatherSunny = "ic_weather_sunny"
         static let weatherCloudy = "ic_weather_cloudy"
         static let weatherRainy = "ic_weather_rainy"
+        static let weatherSnowy = "ic_weather_snowy"
+        static let workBad = "ic_work_bad"
+        static let workAverage = "ic_work_average"
+        static let workGood = "ic_work_good"
         static let workDisabled = "ic_work_disabled"
-        static let work = "ic_work_universal"
+
     }
 }
 

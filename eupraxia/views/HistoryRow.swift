@@ -16,53 +16,48 @@ struct HistoryRow: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(self.viewModel.getDate())
-                    .bold()
+                    .font(.custom(K.Font.openSansSemiBold, size: 14))
                     .lineLimit(1)
-                    .foregroundColor(.black)
-                    .padding(.bottom)
-                Text("Feelings: \(self.viewModel.getFeeling())")
-                    .lineLimit(1)
-                    .foregroundColor(.black)
-                Text("Weather: \(self.viewModel.getWeather())")
-                    .lineLimit(1)
-                    .foregroundColor(.black)
-                Text("Work: \(self.viewModel.getWork())")
-                    .lineLimit(1)
-                    .foregroundColor(.black)
+                    .foregroundColor(.darkPink)
+                    .padding(.bottom, 12)
 
                 HStack {
+                    VStack {
+                        Text(self.viewModel.didHaveSex() ? "Pain" : "No pain")
+                            .lineLimit(1)
+                            .foregroundColor(.black)
+                            .font(.custom(K.Font.openSansSemiBold, size: 12))
+                    }
+                    .frame(width: 70, height: 61)
+                    .background(Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color.border, lineWidth: 1)
+                    )
+
                     Spacer()
 
-                    Text("B")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didEatBreakfast() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
+                    HStack {
+                        Image(self.viewModel.getFeelingIcon())
+                            .padding(.trailing, 10)
+                        Image(self.viewModel.getWeatherIcon())
+                            .padding(.trailing, 10)
+                        Image(self.viewModel.getWorkIcon())
+                            .padding(.trailing, 10)
+                    }
+                    .padding()
 
-                    Text("L")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didEatLunch() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
-
-                    Text("D")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didEatDinner() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
-
-                    Text("S")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didHaveSex() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
+                    Spacer()
                 }
-            }
             .padding()
+                .background(Color.white)
+                .cornerRadius(20)
+                .shadow(color: Color.border, radius: 5, x: 0, y: 3)
+            }
+            .padding([.leading, .trailing])
+            .padding(.top, 8)
         }
-        .background(Color("brokenWhite"))
-        .cornerRadius(10.0)
-        .shadow(color: Color.gray, radius: 0.5, x: 0, y: 0)
+        .background(Color.clear)
     }
 }
 

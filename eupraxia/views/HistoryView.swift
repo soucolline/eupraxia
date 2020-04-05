@@ -35,7 +35,7 @@ struct HistoryView: View {
                         .padding(.top, 22)
                         .padding(.leading, 42)
 
-                    VStack {
+                    VStack(alignment: .leading) {
                         ForEach(surveys, id: \.id) { (survey: Survey) in
                             HStack {
                                 ZStack(alignment: .top) {
@@ -50,11 +50,12 @@ struct HistoryView: View {
                                         .offset(x: 12, y: 10)
                                 }
                                 HistoryRow(viewModel: HistoryRowViewModel(with: survey))
-                                    .padding(.leading, 20)
+
                             }
                         }
                     }
                     .padding(.top, 30)
+                    .padding(.trailing, 44)
                 }
 
 
