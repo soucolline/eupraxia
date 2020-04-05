@@ -13,50 +13,38 @@ struct HistoryRow: View {
     @ObservedObject var viewModel: HistoryRowViewModel
 
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(self.viewModel.getDate())
-                    .font(.custom(K.Font.openSansSemiBold, size: 14))
-                    .lineLimit(1)
-                    .foregroundColor(.darkPink)
-                    .padding(.bottom, 12)
+        VStack(alignment: .leading) {
+            Text(self.viewModel.getDate())
+                .font(.custom(K.Font.openSansSemiBold, size: 14))
+                .lineLimit(1)
+                .foregroundColor(.darkPink)
+
+            HStack {
+                PainView(
+                    text: self.viewModel.didHaveStomachAche() ? "Pain" : "No pain",
+                    isEnabled: !self.viewModel.didHaveStomachAche()
+                )
+
+                Spacer()
 
                 HStack {
-                    VStack {
-                        Text(self.viewModel.didHaveSex() ? "Pain" : "No pain")
-                            .lineLimit(1)
-                            .foregroundColor(.black)
-                            .font(.custom(K.Font.openSansSemiBold, size: 12))
-                    }
-                    .frame(width: 70, height: 61)
-                    .background(Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color.border, lineWidth: 1)
-                    )
-
-                    Spacer()
-
-                    HStack {
-                        Image(self.viewModel.getFeelingIcon())
-                            .padding(.trailing, 10)
-                        Image(self.viewModel.getWeatherIcon())
-                            .padding(.trailing, 10)
-                        Image(self.viewModel.getWorkIcon())
-                            .padding(.trailing, 10)
-                    }
-                    .padding()
-
-                    Spacer()
+                    Image(self.viewModel.getWeatherIcon())
+                    .padding(.trailing, 10)
+                    Image(self.viewModel.getFeelingIcon())
+                        .padding(.trailing, 10)
+                    Image(self.viewModel.getWorkIcon())
+                        .padding(.trailing, 10)
                 }
-            .padding()
-                .background(Color.white)
-                .cornerRadius(20)
-                .shadow(color: Color.border, radius: 5, x: 0, y: 3)
+                .padding()
+
+                Spacer()
             }
-            .padding([.leading, .trailing])
-            .padding(.top, 8)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(20)
+            .shadow(color: Color.border, radius: 5, x: 0, y: 3)
         }
+        .padding(.top, 6)
         .background(Color.clear)
     }
 }

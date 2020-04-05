@@ -13,7 +13,7 @@ struct HistoryView: View {
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     @FetchRequest(
         entity: Survey.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Survey.date, ascending: true)]
+        sortDescriptors: [NSSortDescriptor(keyPath: \Survey.date, ascending: false)]
     ) var surveys: FetchedResults<Survey>
 
     var body: some View {
@@ -44,21 +44,21 @@ struct HistoryView: View {
                                         .frame(width: 1)
                                         .padding(.leading, 24)
                                         .padding(.top, -12)
+                                        .padding(.bottom, -40)
                                     Circle()
                                         .fill(Color.darkPink)
                                         .frame(width: 10, height: 10)
                                         .offset(x: 12, y: 10)
                                 }
                                 HistoryRow(viewModel: HistoryRowViewModel(with: survey))
-
+                                    .padding(.leading)
+                                    .padding(.trailing, 44)
                             }
                         }
                     }
                     .padding(.top, 30)
-                    .padding(.trailing, 44)
+                    .padding(.bottom, 40)
                 }
-
-
             }
             .onAppear { UITableView.appearance().separatorStyle = .none }
             .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
