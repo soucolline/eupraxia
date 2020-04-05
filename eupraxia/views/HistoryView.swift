@@ -37,11 +37,20 @@ struct HistoryView: View {
 
                     VStack {
                         ForEach(surveys, id: \.id) { (survey: Survey) in
-                            ZStack {
-                                HistoryRow(viewModel: HistoryRowViewModel(with: survey))
-                                NavigationLink(destination: DetailsView(viewModel: DetailsViewModel(with: survey))) {
-                                    EmptyView()
+                            HStack {
+                                ZStack(alignment: .top) {
+                                    Rectangle()
+                                        .fill(Color.darkPink)
+                                        .frame(width: 1)
+                                        .padding(.leading, 24)
+                                        .padding(.top, -12)
+                                    Circle()
+                                        .fill(Color.darkPink)
+                                        .frame(width: 10, height: 10)
+                                        .offset(x: 12, y: 10)
                                 }
+                                HistoryRow(viewModel: HistoryRowViewModel(with: survey))
+                                    .padding(.leading, 20)
                             }
                         }
                     }
