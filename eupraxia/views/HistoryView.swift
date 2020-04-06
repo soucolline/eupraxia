@@ -29,7 +29,7 @@ struct HistoryView: View {
                         .padding(.top, 72)
                         .padding(.leading, 42)
 
-                    Text("You had no stomach pains for 28 days straight.")
+                    Text(self.getSubtitle())
                         .font(Font.custom(K.Font.openSansSemiBold, size: 16))
                         .foregroundColor(Color.darkPink)
                         .padding(.top, 22)
@@ -63,6 +63,31 @@ struct HistoryView: View {
             .onAppear { UITableView.appearance().separatorStyle = .none }
             .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
         }
+    }
+
+    private func getSubtitle() -> String {
+        let numberOfDays = self.getConsecutiveDaysOfNoPain()
+
+        if numberOfDays == 0 {
+            return "You had a stomach pain yesterday 😭"
+        } else {
+            return "You had no stomach pains for \(numberOfDays) day\(numberOfDays > 1 ? "s" : "") straight."
+        }
+
+    }
+
+    private func getConsecutiveDaysOfNoPain() -> Int {
+        var numberOfDaysWithoutPain = 0
+
+        for survey in surveys {
+            if survey.hadStomachAche {
+                break
+            }
+
+            numberOfDaysWithoutPain += 1
+        }
+
+        return numberOfDaysWithoutPain
     }
 }
 

@@ -29,7 +29,7 @@ struct HistoryRow: View {
 
                 HStack {
                     Image(self.viewModel.getWeatherIcon())
-                    .padding(.trailing, 10)
+                        .padding(.trailing, 10)
                     Image(self.viewModel.getFeelingIcon())
                         .padding(.trailing, 10)
                     Image(self.viewModel.getWorkIcon())

@@ -66,6 +66,7 @@ extension Survey {
         survey.weather = 1
         survey.work = 1
         survey.lunch = "My lunch"
+        survey.hadStomachAche = false
 
         return survey
     }
