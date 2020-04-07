@@ -13,56 +13,39 @@ struct HistoryRow: View {
     @ObservedObject var viewModel: HistoryRowViewModel
 
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(self.viewModel.getDate())
-                    .bold()
-                    .lineLimit(1)
-                    .foregroundColor(.black)
-                    .padding(.bottom)
-                Text("Feelings: \(self.viewModel.getFeeling())")
-                    .lineLimit(1)
-                    .foregroundColor(.black)
-                Text("Weather: \(self.viewModel.getWeather())")
-                    .lineLimit(1)
-                    .foregroundColor(.black)
-                Text("Work: \(self.viewModel.getWork())")
-                    .lineLimit(1)
-                    .foregroundColor(.black)
+        VStack(alignment: .leading) {
+            Text(self.viewModel.getDate())
+                .font(.custom(K.Font.openSansSemiBold, size: 14))
+                .lineLimit(1)
+                .foregroundColor(.darkPink)
+
+            HStack {
+                PainView(
+                    text: self.viewModel.didHaveStomachAche() ? "Pain" : "No pain",
+                    isEnabled: !self.viewModel.didHaveStomachAche()
+                )
+
+                Spacer()
 
                 HStack {
-                    Spacer()
-
-                    Text("B")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didEatBreakfast() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
-
-                    Text("L")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didEatLunch() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
-
-                    Text("D")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didEatDinner() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
-
-                    Text("S")
-                    .frame(width: 30, height: 30)
-                    .background((self.viewModel.didHaveSex() ? Color.green : Color.red))
-                    .foregroundColor(.white)
-                    .clipShape(Circle())
+                    Image(self.viewModel.getWeatherIcon())
+                        .padding(.trailing, 10)
+                    Image(self.viewModel.getFeelingIcon())
+                        .padding(.trailing, 10)
+                    Image(self.viewModel.getWorkIcon())
+                        .padding(.trailing, 10)
                 }
+                .padding()
+
+                Spacer()
             }
             .padding()
+            .background(Color.white)
+            .cornerRadius(20)
+            .shadow(color: Color.border, radius: 5, x: 0, y: 3)
         }
-        .background(Color("brokenWhite"))
-        .cornerRadius(10.0)
-        .shadow(color: Color.gray, radius: 0.5, x: 0, y: 0)
+        .padding(.top, 6)
+        .background(Color.clear)
     }
 }
 

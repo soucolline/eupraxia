@@ -26,6 +26,11 @@
 		E9B33F1A2439210E00111B80 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F192439210E00111B80 /* NotificationsManager.swift */; };
 		E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A24F24388E3900904AA4 /* DetailsView.swift */; };
 		E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */; };
+		E9B929D62439C8D70010E542 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9B929D32439C8D70010E542 /* OpenSans-Bold.ttf */; };
+		E9B929D72439C8D70010E542 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9B929D42439C8D70010E542 /* OpenSans-Regular.ttf */; };
+		E9B929D82439C8D70010E542 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9B929D52439C8D70010E542 /* OpenSans-SemiBold.ttf */; };
+		E9B929DA2439C9350010E542 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B929D92439C9350010E542 /* Constants.swift */; };
+		E9B929DC243A08EE0010E542 /* PainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B929DB243A08EE0010E542 /* PainView.swift */; };
 		E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8824360FD300A85495 /* AppDelegate.swift */; };
 		E9CC6C8B24360FD300A85495 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */; };
 		E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C8E24360FD300A85495 /* Assets.xcassets */; };
@@ -54,6 +59,11 @@
 		E9B33F192439210E00111B80 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		E9B5A24F24388E3900904AA4 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E9B929D32439C8D70010E542 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E9B929D42439C8D70010E542 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		E9B929D52439C8D70010E542 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E9B929D92439C9350010E542 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9B929DB243A08EE0010E542 /* PainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainView.swift; sourceTree = "<group>"; };
 		E9CC6C8524360FD200A85495 /* Eupraxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eupraxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC6C8824360FD300A85495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC6C8A24360FD300A85495 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,8 +92,19 @@
 				E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */,
 				E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */,
 				E9B33F192439210E00111B80 /* NotificationsManager.swift */,
+				E9B929D92439C9350010E542 /* Constants.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		E9B929D22439C8C20010E542 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E9B929D32439C8D70010E542 /* OpenSans-Bold.ttf */,
+				E9B929D42439C8D70010E542 /* OpenSans-Regular.ttf */,
+				E9B929D52439C8D70010E542 /* OpenSans-SemiBold.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		E9CC6C7C24360FD200A85495 = {
@@ -131,6 +152,7 @@
 				E92FB1E424376A85004BDD1F /* HistoryRow.swift */,
 				E9B5A24F24388E3900904AA4 /* DetailsView.swift */,
 				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
+				E9B929DB243A08EE0010E542 /* PainView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -168,6 +190,7 @@
 				E9CC6C8E24360FD300A85495 /* Assets.xcassets */,
 				E92FB1EA2437709E004BDD1F /* Colors.xcassets */,
 				E9CC6C9024360FD300A85495 /* Preview Content */,
+				E9B929D22439C8C20010E542 /* fonts */,
 			);
 			path = supportingFiles;
 			sourceTree = "<group>";
@@ -232,7 +255,10 @@
 			files = (
 				E9CC6C9524360FD300A85495 /* LaunchScreen.storyboard in Resources */,
 				E92FB1EB2437709E004BDD1F /* Colors.xcassets in Resources */,
+				E9B929D82439C8D70010E542 /* OpenSans-SemiBold.ttf in Resources */,
 				E9CC6C9224360FD300A85495 /* Preview Assets.xcassets in Resources */,
+				E9B929D62439C8D70010E542 /* OpenSans-Bold.ttf in Resources */,
+				E9B929D72439C8D70010E542 /* OpenSans-Regular.ttf in Resources */,
 				E9CC6C8F24360FD300A85495 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */,
+				E9B929DA2439C9350010E542 /* Constants.swift in Sources */,
 				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
 				E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */,
 				E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */,
@@ -264,6 +291,7 @@
 				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
 				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
 				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
+				E9B929DC243A08EE0010E542 /* PainView.swift in Sources */,
 				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
