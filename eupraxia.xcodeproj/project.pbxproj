@@ -16,8 +16,10 @@
 		E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E424376A85004BDD1F /* HistoryRow.swift */; };
 		E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */; };
 		E92FB1EB2437709E004BDD1F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92FB1EA2437709E004BDD1F /* Colors.xcassets */; };
+		E949630B243D1471001C6A7E /* SurveysRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630A243D1471001C6A7E /* SurveysRepository.swift */; };
+		E949630D243D14E8001C6A7E /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630C243D14E8001C6A7E /* Survey.swift */; };
 		E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C224371EA900318C2B /* Model.xcdatamodeld */; };
-		E97AE2C72437230600318C2B /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C52437230600318C2B /* Survey.swift */; };
+		E97AE2C72437230600318C2B /* ManagedSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C52437230600318C2B /* ManagedSurvey.swift */; };
 		E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C924372AE200318C2B /* TabBarHomeView.swift */; };
 		E9B33F102439121D00111B80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F0F2439121D00111B80 /* SettingsView.swift */; };
 		E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */; };
@@ -49,8 +51,10 @@
 		E92FB1E424376A85004BDD1F /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
 		E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowViewModel.swift; sourceTree = "<group>"; };
 		E92FB1EA2437709E004BDD1F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E949630A243D1471001C6A7E /* SurveysRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysRepository.swift; sourceTree = "<group>"; };
+		E949630C243D14E8001C6A7E /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		E97AE2C324371EA900318C2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		E97AE2C52437230600318C2B /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		E97AE2C52437230600318C2B /* ManagedSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedSurvey.swift; sourceTree = "<group>"; };
 		E97AE2C924372AE200318C2B /* TabBarHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHomeView.swift; sourceTree = "<group>"; };
 		E9B33F0F2439121D00111B80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		E9496307243D143B001C6A7E /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E949630A243D1471001C6A7E /* SurveysRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
 		E9B929D22439C8C20010E542 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 				E9CC6C9E2436102200A85495 /* models */,
 				E9CC6C9D2436101900A85495 /* viewModels */,
 				E9CC6C9C2436101000A85495 /* views */,
+				E9496307243D143B001C6A7E /* repositories */,
 				E920F173243653F800F27BA3 /* utils */,
 				E9CC6C9F2436105A00A85495 /* supportingFiles */,
 			);
@@ -174,7 +187,8 @@
 				E920F16924361F3500F27BA3 /* Feeling.swift */,
 				E920F16B24361F5B00F27BA3 /* Weather.swift */,
 				E920F16D2436200200F27BA3 /* Work.swift */,
-				E97AE2C52437230600318C2B /* Survey.swift */,
+				E97AE2C52437230600318C2B /* ManagedSurvey.swift */,
+				E949630C243D14E8001C6A7E /* Survey.swift */,
 				E97AE2C224371EA900318C2B /* Model.xcdatamodeld */,
 			);
 			path = models;
@@ -270,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E949630B243D1471001C6A7E /* SurveysRepository.swift in Sources */,
 				E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */,
 				E9B929DA2439C9350010E542 /* Constants.swift in Sources */,
 				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
@@ -278,6 +293,7 @@
 				E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */,
 				E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */,
 				E9B33F102439121D00111B80 /* SettingsView.swift in Sources */,
+				E97AE2C72437230600318C2B /* ManagedSurvey.swift in Sources */,
 				E97AE2C72437230600318C2B /* Survey.swift in Sources */,
 				E9B33F1A2439210E00111B80 /* NotificationsManager.swift in Sources */,
 				E9CC6C8924360FD300A85495 /* AppDelegate.swift in Sources */,
@@ -291,6 +307,7 @@
 				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
 				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
 				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
+				E949630D243D14E8001C6A7E /* Survey.swift in Sources */,
 				E9B929DC243A08EE0010E542 /* PainView.swift in Sources */,
 				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);

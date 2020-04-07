@@ -12,9 +12,9 @@ import CoreData
 struct HistoryView: View {
     @Environment(\.managedObjectContext) var context: NSManagedObjectContext
     @FetchRequest(
-        entity: Survey.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Survey.date, ascending: false)]
-    ) var surveys: FetchedResults<Survey>
+        entity: ManagedSurvey.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \ManagedSurvey.date, ascending: false)]
+    ) var surveys: FetchedResults<ManagedSurvey>
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -36,7 +36,7 @@ struct HistoryView: View {
                         .padding(.leading, 42)
 
                     VStack(alignment: .leading) {
-                        ForEach(surveys, id: \.id) { (survey: Survey) in
+                        ForEach(surveys, id: \.id) { (survey: ManagedSurvey) in
                             HStack {
                                 ZStack(alignment: .top) {
                                     Rectangle()
@@ -50,7 +50,7 @@ struct HistoryView: View {
                                         .frame(width: 10, height: 10)
                                         .offset(x: 12, y: 10)
                                 }
-                                HistoryRow(viewModel: HistoryRowViewModel(with: survey))
+                                HistoryRow(viewModel: HistoryRowViewModel(with: survey.toSurvey()))
                                     .padding(.leading)
                                     .padding(.trailing, 44)
                             }
@@ -94,7 +94,7 @@ struct HistoryView: View {
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        _ = Survey.createTestSurvey(from: context)
+        _ = ManagedSurvey.createTestSurvey(from: context)
         return HistoryView().environment(\.managedObjectContext, context)
     }
 }

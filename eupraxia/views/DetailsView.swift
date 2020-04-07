@@ -36,7 +36,7 @@ struct DetailsView: View {
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let survey = Survey.createTestSurvey(from: context)
+        let survey = ManagedSurvey.createTestSurvey(from: context).toSurvey()
         return DetailsView(viewModel: DetailsViewModel(with: survey))
     }
 }

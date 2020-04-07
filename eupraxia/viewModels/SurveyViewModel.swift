@@ -46,7 +46,7 @@ final class SurveyViewModel: ObservableObject {
     }
 
     func generateSurvey() {
-        let survey = Survey(
+        let survey = ManagedSurvey(
             date: self.surveyDate,
             feeling: self.feelings[self.selectedFeeling],
             weather: self.weather[self.selectedWeather],

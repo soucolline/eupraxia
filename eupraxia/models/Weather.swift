@@ -23,4 +23,3 @@ enum Weather: Int16, CaseIterable {
         }
     }
 }
-

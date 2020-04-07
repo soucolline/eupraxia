@@ -27,15 +27,15 @@ final class DetailsViewModel: ObservableObject {
     }
 
     func getFeeling() -> String {
-        Feeling(rawValue: self.survey.feeling)?.label ?? ""
+        self.survey.feeling.label
     }
 
     func getWeather() -> String {
-        Weather(rawValue: self.survey.weather)?.label ?? ""
+        self.survey.weather.label
     }
 
     func getWork() -> String {
-        Work(rawValue: self.survey.work)?.label ?? ""
+        self.survey.work.label
     }
 
     func getBreakFast() -> String {

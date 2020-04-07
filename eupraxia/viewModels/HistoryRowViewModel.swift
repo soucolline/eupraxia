@@ -32,32 +32,29 @@ final class HistoryRowViewModel: ObservableObject {
     }
 
     func getFeelingIcon() -> String {
-        switch Feeling(rawValue: self.survey.feeling) {
+        switch self.survey.feeling {
         case .veryBad: return K.Icons.moodVeryBad
         case .bad: return K.Icons.moodBad
         case .average: return K.Icons.moodAverage
         case .good: return K.Icons.moodGood
-        default: return K.Icons.moodAverage
         }
     }
 
     func getWeatherIcon() -> String {
-        switch Weather(rawValue: self.survey.weather) {
+        switch self.survey.weather {
         case .sunny: return K.Icons.weatherSunny
         case .cloudy: return K.Icons.weatherCloudy
         case .rainy: return K.Icons.weatherRainy
         case .snowy: return K.Icons.weatherSnowy
-        default: return K.Icons.weatherSunny
         }
     }
 
     func getWorkIcon() -> String {
-        switch Work(rawValue: self.survey.work) {
+        switch self.survey.work {
         case .bad: return K.Icons.workBad
         case .average: return K.Icons.workAverage
         case .good: return K.Icons.workGood
         case .didNotWork: return K.Icons.workDisabled
-        default: return K.Icons.workAverage
         }
     }
 
