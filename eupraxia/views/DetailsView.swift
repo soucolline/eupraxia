@@ -12,24 +12,34 @@ struct DetailsView: View {
     @ObservedObject var viewModel: DetailsViewModel
 
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text("Feeling : \(viewModel.getFeeling())")
-                Text("Breakfast : \(viewModel.getBreakFast())")
-                Text("Lunch : \(viewModel.getLunch())")
-                Text("Dinner : \(viewModel.getDinner())")
-                Text("Weather : \(viewModel.getWeather())")
-                Text("Work : \(viewModel.getWork())")
-                Text("Sex : \(viewModel.getDidHaveSex())")
-                Text("Stomach ache : \(viewModel.getDidHaveStomachAche())")
+        ScrollView {
+            VStack(spacing: 0) {
+                Group {
+                    HeaderRow(text: "General")
+                    ChoiceRow(text: "How did you feel?", icon: Image(viewModel.getFeelingIcon()), feeling: viewModel.getFeeling())
 
-                Spacer()
+                    HeaderRow(text: "Food")
+                    ToggleRow(viewModel: ToggleRowViewModel(text: "Did you eat breakfast?", details: viewModel.getBreakFast(), value: viewModel.getBreakFast().isNotNil()))
+                        .padding(.bottom, 1)
+                    ToggleRow(viewModel: ToggleRowViewModel(text: "Did you eat lunch?", details: viewModel.getLunch(), value: viewModel.getLunch().isNotNil()))
+                        .padding(.bottom, 1)
+                    ToggleRow(viewModel: ToggleRowViewModel(text: "Did you eat dinner?", details: viewModel.getDinner(), value: viewModel.getDinner().isNotNil()))
+                }
+
+                Group {
+                    HeaderRow(text: "Weather")
+                    ChoiceRow(text: "How was the weather?", icon: Image(viewModel.getWeatherIcon()), feeling: viewModel.getWeather())
+
+                    HeaderRow(text: "Work")
+                    ChoiceRow(text: "How was work?", icon: Image(viewModel.getWorkIcon()), feeling: viewModel.getWork())
+
+                    HeaderRow(text: "Sex")
+                    ToggleRow(viewModel: ToggleRowViewModel(text: "Did you have sex today", details: nil, value: viewModel.didHaveSex()))
+                }
             }
-            .padding()
-
-            Spacer()
         }
         .navigationBarTitle(Text(viewModel.getDate()), displayMode: .inline)
+        .background(Color.background)
     }
 }
 
@@ -37,6 +47,8 @@ struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let survey = ManagedSurvey.createTestSurvey(from: context).toSurvey()
-        return DetailsView(viewModel: DetailsViewModel(with: survey))
+        return NavigationView {
+            DetailsView(viewModel: DetailsViewModel(with: survey))
+        }
     }
 }

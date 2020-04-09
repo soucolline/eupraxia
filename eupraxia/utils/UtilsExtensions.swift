@@ -15,6 +15,10 @@ extension String {
 }
 
 extension Optional where Wrapped == String {
+    func isNotNil() -> Bool {
+        return self != nil
+    }
+
     func isEmptyOrNil() -> Bool {
         guard let self = self else { return true }
 
