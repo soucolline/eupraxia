@@ -16,6 +16,8 @@ final class HistoryViewModel: ObservableObject {
 
     init(with surveysRepository: SurveysRepository) {
         self.surveysRepository = surveysRepository
+
+        self.getSurveys()
     }
 
     func getSurveys() {
