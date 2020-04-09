@@ -14,13 +14,13 @@ struct TabBarHomeView: View {
 
     var body: some View {
         TabView {
-            SurveyView(viewModel: SurveyViewModel(with: context))
+            SurveyView(viewModel: SurveyViewModel(with: SurveysRepositoryImpl(with: context)))
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Survey")
                 }
 
-            HistoryView()
+            HistoryView(viewModel: HistoryViewModel(with: SurveysRepositoryImpl(with: context)))
                 .tabItem {
                     Image(systemName: "clock")
                     Text("History")

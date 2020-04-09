@@ -12,7 +12,7 @@ import CoreData
 
 final class SurveyViewModel: ObservableObject {
 
-    private let context: NSManagedObjectContext
+    private let surveysRepository: SurveysRepository
 
     let feelings = Feeling.allCases
     let weather = Weather.allCases
@@ -35,8 +35,8 @@ final class SurveyViewModel: ObservableObject {
 
     @Published var showSuccessAlert = false
 
-    init(with context: NSManagedObjectContext) {
-        self.context = context
+    init(with surveysRepository: SurveysRepository) {
+        self.surveysRepository = surveysRepository
     }
 
     func isValidateButtonDisabled() -> Bool {
@@ -47,23 +47,19 @@ final class SurveyViewModel: ObservableObject {
 
     func generateSurvey() {
         let survey = Survey(
+            id: UUID(),
             date: self.surveyDate,
             feeling: self.feelings[self.selectedFeeling],
-            weather: self.weather[self.selectedWeather],
-            work: self.work[self.selectedWork],
-            hadSex: self.didHaveSex,
-            hadStomachAche: self.didHaveStomachAche,
             breakfast: self.breakfastFood.nilIfEmpty(),
             lunch: self.lunchFood.nilIfEmpty(),
             dinner: self.dinnerFood.nilIfEmpty(),
-            in: self.context
+            hadSex: self.didHaveSex,
+            hadStomachAche: self.didHaveStomachAche,
+            weather: self.weather[self.selectedWeather],
+            work: self.work[self.selectedWork]
         )
 
-        do {
-            try survey.managedObjectContext?.save()
-        } catch {
-            fatalError("could not save survey")
-        }
+        self.surveysRepository.save(survey: survey)
     }
     
 }

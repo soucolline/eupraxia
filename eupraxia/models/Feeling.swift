@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Feeling: Int16, CaseIterable {
+enum Feeling: Int16, CaseIterable, ChoiceRepresentable {
     case veryBad = 0
     case bad
     case average

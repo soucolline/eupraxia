@@ -46,4 +46,6 @@ extension Color {
     static let darkPink = Color("darkPink")
     static let lightPink = Color("lightPink")
     static let text = Color("text")
+    static let choiceGrey = Color("choiceGrey")
+    static let separator = Color("separator")
 }
