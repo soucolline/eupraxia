@@ -28,28 +28,20 @@ public class ManagedSurvey: NSManagedObject {
     @NSManaged public var work: Int16
 
     init(
-        date: Date,
-        feeling: Feeling,
-        weather: Weather,
-        work: Work,
-        hadSex: Bool,
-        hadStomachAche: Bool,
-        breakfast: String?,
-        lunch: String?,
-        dinner: String?,
+        from survey: Survey,
         in context: NSManagedObjectContext
     ) {
         super.init(entity: Self.entity(), insertInto: context)
-        self.id = UUID()
-        self.date = date
-        self.feeling = feeling.rawValue
-        self.weather = weather.rawValue
-        self.work = work.rawValue
-        self.hadSex = hadSex
-        self.hadStomachAche = hadStomachAche
-        self.breakfast = breakfast
-        self.lunch = lunch
-        self.dinner = dinner
+        self.id = survey.id
+        self.date = survey.date
+        self.feeling = survey.feeling.rawValue
+        self.weather = survey.weather.rawValue
+        self.work = survey.work.rawValue
+        self.hadSex = survey.hadSex
+        self.hadStomachAche = survey.hadStomachAche
+        self.breakfast = survey.breakfast
+        self.lunch = survey.lunch
+        self.dinner = survey.dinner
     }
 
     public override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {

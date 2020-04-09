@@ -10,11 +10,7 @@ import SwiftUI
 import CoreData
 
 struct HistoryView: View {
-    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
-    @FetchRequest(
-        entity: ManagedSurvey.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \ManagedSurvey.date, ascending: false)]
-    ) var surveys: FetchedResults<ManagedSurvey>
+    @ObservedObject var viewModel: HistoryViewModel
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -29,14 +25,14 @@ struct HistoryView: View {
                         .padding(.top, 72)
                         .padding(.leading, 42)
 
-                    Text(self.getSubtitle())
+                    Text(self.viewModel.getSubtitle())
                         .font(Font.custom(K.Font.openSansSemiBold, size: 16))
                         .foregroundColor(Color.darkPink)
                         .padding(.top, 22)
                         .padding(.leading, 42)
 
                     VStack(alignment: .leading) {
-                        ForEach(surveys, id: \.id) { (survey: ManagedSurvey) in
+                        ForEach(viewModel.surveys, id: \.id) { (survey: Survey) in
                             HStack {
                                 ZStack(alignment: .top) {
                                     Rectangle()
@@ -50,7 +46,7 @@ struct HistoryView: View {
                                         .frame(width: 10, height: 10)
                                         .offset(x: 12, y: 10)
                                 }
-                                HistoryRow(viewModel: HistoryRowViewModel(with: survey.toSurvey()))
+                                HistoryRow(viewModel: HistoryRowViewModel(with: survey))
                                     .padding(.leading)
                                     .padding(.trailing, 44)
                             }
@@ -60,34 +56,12 @@ struct HistoryView: View {
                     .padding(.bottom, 40)
                 }
             }
-            .onAppear { UITableView.appearance().separatorStyle = .none }
+            .onAppear {
+                self.viewModel.getSurveys()
+                UITableView.appearance().separatorStyle = .none
+            }
             .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
         }
-    }
-
-    private func getSubtitle() -> String {
-        let numberOfDays = self.getConsecutiveDaysOfNoPain()
-
-        if numberOfDays == 0 {
-            return "You had a stomach pain yesterday 😭"
-        } else {
-            return "You had no stomach pains for \(numberOfDays) day\(numberOfDays > 1 ? "s" : "") straight."
-        }
-
-    }
-
-    private func getConsecutiveDaysOfNoPain() -> Int {
-        var numberOfDaysWithoutPain = 0
-
-        for survey in surveys {
-            if survey.hadStomachAche {
-                break
-            }
-
-            numberOfDaysWithoutPain += 1
-        }
-
-        return numberOfDaysWithoutPain
     }
 }
 
@@ -95,6 +69,6 @@ struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         _ = ManagedSurvey.createTestSurvey(from: context)
-        return HistoryView().environment(\.managedObjectContext, context)
+        return HistoryView(viewModel: HistoryViewModel(with: SurveysRepositoryImpl(with: context))).environment(\.managedObjectContext, context)
     }
 }

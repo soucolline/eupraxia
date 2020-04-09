@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Survey: Codable {
+struct Survey {
     let id: UUID
     let date: Date
     let feeling: Feeling

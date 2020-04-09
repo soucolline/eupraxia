@@ -40,7 +40,12 @@ class SurveysRepositoryImpl: SurveysRepository {
     }
 
     func save(survey: Survey) {
-
+        do {
+            _ = ManagedSurvey(from: survey, in: self.context)
+            try self.context.save()
+        } catch {
+            fatalError("Could not save survey")
+        }
     }
 
     func update(survey: Survey) {
