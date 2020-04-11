@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Weather: Int16, CaseIterable {
+enum Weather: Int16, CaseIterable, ChoiceRepresentable {
     case sunny = 0
     case cloudy
     case rainy
@@ -23,4 +23,3 @@ enum Weather: Int16, CaseIterable {
         }
     }
 }
-

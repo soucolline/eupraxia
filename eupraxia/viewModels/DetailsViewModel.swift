@@ -26,35 +26,62 @@ final class DetailsViewModel: ObservableObject {
         self.dateFormatter.string(from: self.survey.date)
     }
 
-    func getFeeling() -> String {
-        Feeling(rawValue: self.survey.feeling)?.label ?? ""
+    func getFeeling() -> Feeling {
+        self.survey.feeling
     }
 
-    func getWeather() -> String {
-        Weather(rawValue: self.survey.weather)?.label ?? ""
+    func getWeather() -> Weather {
+        self.survey.weather
     }
 
-    func getWork() -> String {
-        Work(rawValue: self.survey.work)?.label ?? ""
+    func getWork() -> Work {
+        self.survey.work
     }
 
-    func getBreakFast() -> String {
-        survey.breakfast ?? "Nothing"
+    func getBreakFast() -> String? {
+        survey.breakfast
     }
 
-    func getLunch() -> String {
-        survey.lunch ?? "Nothing"
+    func getLunch() -> String? {
+        survey.lunch
     }
 
-    func getDinner() -> String {
-        survey.dinner ?? "Nothing"
+    func getDinner() -> String? {
+        survey.dinner
     }
 
-    func getDidHaveSex() -> String {
-        self.survey.hadSex ? "Yes" : "No"
+    func didHaveSex() -> Bool {
+        self.survey.hadSex
     }
 
     func getDidHaveStomachAche() -> String {
         self.survey.hadStomachAche ? "Yes" : "No"
+    }
+
+    func getFeelingIcon() -> String {
+        switch self.survey.feeling {
+        case .veryBad: return K.Icons.moodVeryBad
+        case .bad: return K.Icons.moodBad
+        case .average: return K.Icons.moodAverage
+        case .good: return K.Icons.moodGood
+        }
+    }
+
+    func getWeatherIcon() -> String {
+        switch self.survey.weather {
+        case .sunny: return K.Icons.weatherSunny
+        case .cloudy: return K.Icons.weatherCloudy
+        case .rainy: return K.Icons.weatherRainy
+        case .snowy: return K.Icons.weatherSnowy
+        }
+    }
+
+    func getWorkIcon() -> String {
+        switch self.survey.work {
+        case .bad: return K.Icons.workBad
+        case .average: return K.Icons.workAverage
+        case .good: return K.Icons.workGood
+        case .didNotWork: return K.Icons.workDisabled
+        }
     }
 }

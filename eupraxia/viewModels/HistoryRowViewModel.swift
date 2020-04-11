@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class HistoryRowViewModel: ObservableObject {
 
@@ -26,16 +27,35 @@ final class HistoryRowViewModel: ObservableObject {
         self.dateFormatter.string(from: self.survey.date)
     }
 
-    func getFeeling() -> String {
-        Feeling(rawValue: self.survey.feeling)?.label ?? ""
+    func didHaveStomachAche() -> Bool {
+        self.survey.hadStomachAche
     }
 
-    func getWeather() -> String {
-        Weather(rawValue: self.survey.weather)?.label ?? ""
+    func getFeelingIcon() -> String {
+        switch self.survey.feeling {
+        case .veryBad: return K.Icons.moodVeryBad
+        case .bad: return K.Icons.moodBad
+        case .average: return K.Icons.moodAverage
+        case .good: return K.Icons.moodGood
+        }
     }
 
-    func getWork() -> String {
-        Work(rawValue: self.survey.work)?.label ?? ""
+    func getWeatherIcon() -> String {
+        switch self.survey.weather {
+        case .sunny: return K.Icons.weatherSunny
+        case .cloudy: return K.Icons.weatherCloudy
+        case .rainy: return K.Icons.weatherRainy
+        case .snowy: return K.Icons.weatherSnowy
+        }
+    }
+
+    func getWorkIcon() -> String {
+        switch self.survey.work {
+        case .bad: return K.Icons.workBad
+        case .average: return K.Icons.workAverage
+        case .good: return K.Icons.workGood
+        case .didNotWork: return K.Icons.workDisabled
+        }
     }
 
     func didEatBreakfast() -> Bool {

@@ -102,6 +102,6 @@ struct SurveyView: View {
 struct SurveyView_Previews: PreviewProvider {
     static var previews: some View {
         let previewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        return SurveyView(viewModel: SurveyViewModel(with: previewContext))
+        return SurveyView(viewModel: SurveyViewModel(with: SurveysRepositoryImpl(with: previewContext)))
     }
 }

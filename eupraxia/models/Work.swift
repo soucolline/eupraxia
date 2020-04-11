@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Work: Int16, CaseIterable {
+enum Work: Int16, CaseIterable, ChoiceRepresentable {
     case bad = 0
     case average
     case good
