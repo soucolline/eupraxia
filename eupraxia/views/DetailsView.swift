@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DetailsView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @EnvironmentObject var repository: SurveysRepositoryImpl
     @ObservedObject var viewModel: DetailsViewModel
 
     var body: some View {
@@ -41,7 +42,7 @@ struct DetailsView: View {
                 HStack(alignment: .center, spacing: 20) {
                     Button(action: {
                         print("Should delete survey")
-                        self.mode.wrappedValue.dismiss()
+                        self.deleteSurvey()
                     }) {
                         Text("Delete")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -49,7 +50,7 @@ struct DetailsView: View {
                             .foregroundColor(Color.white)
                             .font(.custom(K.Font.openSansSemiBold, size: 16.0))
                     }
-                    .background(Color.red)
+                    .background(Color.buttonSalmon)
                     .cornerRadius(10.0)
                 }
                 .padding(20)
@@ -57,6 +58,12 @@ struct DetailsView: View {
         }
         .navigationBarTitle(Text(viewModel.getDate()), displayMode: .inline)
         .background(Color.background)
+    }
+
+    private func deleteSurvey() {
+        self.repository.delete(survey: viewModel.survey) {
+            self.mode.wrappedValue.dismiss()
+        }
     }
 }
 

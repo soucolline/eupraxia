@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreData
-import Combine
 
 protocol SurveysRepository {
     func getSurveys() -> [Survey]
@@ -17,7 +16,7 @@ protocol SurveysRepository {
     func delete(survey: Survey, completion: @escaping () -> Void)
 }
 
-class SurveysRepositoryImpl: SurveysRepository {
+class SurveysRepositoryImpl: SurveysRepository, ObservableObject {
 
     private let context: NSManagedObjectContext
 
@@ -55,7 +54,7 @@ class SurveysRepositoryImpl: SurveysRepository {
 
     func delete(survey: Survey, completion: @escaping () -> Void) {
         let request = NSFetchRequest<ManagedSurvey>(entityName: "ManagedSurvey")
-        request.predicate = NSPredicate(format: "id==\(survey.id)")
+        request.predicate = NSPredicate(format: "id == %@",survey.id.uuidString)
 
         do {
             let result = try self.context.fetch(request)

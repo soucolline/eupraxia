@@ -10,9 +10,7 @@ import Foundation
 
 final class DetailsViewModel: ObservableObject {
 
-    @Published var isDeleted = false
-
-    private let survey: Survey
+    var survey: Survey
 
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -85,9 +83,5 @@ final class DetailsViewModel: ObservableObject {
         case .good: return K.Icons.workGood
         case .didNotWork: return K.Icons.workDisabled
         }
-    }
-
-    func deleteSurvey() {
-
     }
 }
