@@ -13,10 +13,10 @@ protocol SurveysRepository {
     func getSurveys() -> [Survey]
     func save(survey: Survey)
     func update(survey: Survey)
-    func delete(survey: Survey)
+    func delete(survey: Survey, completion: @escaping () -> Void)
 }
 
-class SurveysRepositoryImpl: SurveysRepository {
+class SurveysRepositoryImpl: SurveysRepository, ObservableObject {
 
     private let context: NSManagedObjectContext
 
@@ -52,8 +52,21 @@ class SurveysRepositoryImpl: SurveysRepository {
 
     }
 
-    func delete(survey: Survey) {
+    func delete(survey: Survey, completion: @escaping () -> Void) {
+        let request = NSFetchRequest<ManagedSurvey>(entityName: "ManagedSurvey")
+        request.predicate = NSPredicate(format: "id == %@",survey.id.uuidString)
 
+        do {
+            let result = try self.context.fetch(request)
+
+            for survey in result {
+                self.context.delete(survey)
+            }
+
+            completion()
+        } catch {
+            fatalError("Could not delete survey")
+        }
     }
 
     private func saveContext() {
