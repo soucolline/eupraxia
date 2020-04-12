@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct DetailsView: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject var viewModel: DetailsViewModel
 
     var body: some View {
@@ -36,6 +37,22 @@ struct DetailsView: View {
                     HeaderRow(text: "Sex")
                     ToggleRow(viewModel: ToggleRowViewModel(text: "Did you have sex today", details: nil, value: viewModel.didHaveSex()))
                 }
+
+                HStack(alignment: .center, spacing: 20) {
+                    Button(action: {
+                        print("Should delete survey")
+                        self.mode.wrappedValue.dismiss()
+                    }) {
+                        Text("Delete")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(Color.white)
+                            .font(.custom(K.Font.openSansSemiBold, size: 16.0))
+                    }
+                    .background(Color.red)
+                    .cornerRadius(10.0)
+                }
+                .padding(20)
             }
         }
         .navigationBarTitle(Text(viewModel.getDate()), displayMode: .inline)
