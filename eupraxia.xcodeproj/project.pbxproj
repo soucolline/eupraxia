@@ -16,6 +16,8 @@
 		E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E424376A85004BDD1F /* HistoryRow.swift */; };
 		E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */; };
 		E92FB1EB2437709E004BDD1F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92FB1EA2437709E004BDD1F /* Colors.xcassets */; };
+		E9316E5724643E1800C34381 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5624643E1800C34381 /* ExportView.swift */; };
+		E9316E5A24643F8300C34381 /* ExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5924643F8300C34381 /* ExportViewModel.swift */; };
 		E949630B243D1471001C6A7E /* SurveysRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630A243D1471001C6A7E /* SurveysRepository.swift */; };
 		E949630D243D14E8001C6A7E /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630C243D14E8001C6A7E /* Survey.swift */; };
 		E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C224371EA900318C2B /* Model.xcdatamodeld */; };
@@ -58,6 +60,8 @@
 		E92FB1E424376A85004BDD1F /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
 		E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowViewModel.swift; sourceTree = "<group>"; };
 		E92FB1EA2437709E004BDD1F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E9316E5624643E1800C34381 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		E9316E5924643F8300C34381 /* ExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewModel.swift; sourceTree = "<group>"; };
 		E949630A243D1471001C6A7E /* SurveysRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysRepository.swift; sourceTree = "<group>"; };
 		E949630C243D14E8001C6A7E /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		E97AE2C324371EA900318C2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -113,6 +117,24 @@
 				E9B929D92439C9350010E542 /* Constants.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		E9316E5324643DFD00C34381 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
+				E9316E5624643E1800C34381 /* ExportView.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		E9316E5824643F6C00C34381 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				E9B33F1724391AA300111B80 /* SettingsViewModel.swift */,
+				E9316E5924643F8300C34381 /* ExportViewModel.swift */,
+			);
+			path = settings;
 			sourceTree = "<group>";
 		};
 		E9496307243D143B001C6A7E /* repositories */ = {
@@ -192,13 +214,13 @@
 		E9CC6C9C2436101000A85495 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E9316E5324643DFD00C34381 /* settings */,
 				E9BF7141243F4B3E007C639B /* tableview */,
 				E9CC6CA02436113800A85495 /* SurveyView.swift */,
 				E97AE2C924372AE200318C2B /* TabBarHomeView.swift */,
 				E92FB1E224373284004BDD1F /* HistoryView.swift */,
 				E92FB1E424376A85004BDD1F /* HistoryRow.swift */,
 				E9B5A24F24388E3900904AA4 /* DetailsView.swift */,
-				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
 				E9B929DB243A08EE0010E542 /* PainView.swift */,
 			);
 			path = views;
@@ -207,12 +229,12 @@
 		E9CC6C9D2436101900A85495 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E9316E5824643F6C00C34381 /* settings */,
 				E9BF714A243F55CE007C639B /* tableview */,
 				E920F16F243648A900F27BA3 /* SurveyViewModel.swift */,
 				E9BF713E243F15B8007C639B /* HistoryViewModel.swift */,
 				E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */,
 				E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */,
-				E9B33F1724391AA300111B80 /* SettingsViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -345,8 +367,10 @@
 				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
 				E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */,
 				E9BF713F243F15B8007C639B /* HistoryViewModel.swift in Sources */,
+				E9316E5A24643F8300C34381 /* ExportViewModel.swift in Sources */,
 				E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */,
 				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
+				E9316E5724643E1800C34381 /* ExportView.swift in Sources */,
 				E9BF7152243FC10B007C639B /* SeparatorView.swift in Sources */,
 				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
 				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,

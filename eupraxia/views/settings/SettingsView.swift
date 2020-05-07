@@ -9,7 +9,10 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.managedObjectContext) var context
     @ObservedObject var viewModel: SettingsViewModel
+
+    @State private var showExportView = false
 
     var body: some View {
         NavigationView {
@@ -23,6 +26,23 @@ struct SettingsView: View {
                         DatePicker(selection: $viewModel.notificationTriggerTime, displayedComponents: .hourAndMinute) {
                             Text("Notification time")
                         }
+                    }
+                }
+
+                Section(header: Text("Import / export")) {
+                    Button(action: {
+
+                    }, label: {
+                        Text("Import data")
+                    })
+
+                    Button(action: {
+                        self.showExportView.toggle()
+                    }, label: {
+                        Text("Export data")
+                    })
+                    .sheet(isPresented: $showExportView) {
+                        ExportView(viewModel: ExportViewModel(with: SurveysRepositoryImpl(with: self.context)))
                     }
                 }
             }
