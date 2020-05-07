@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ExportView: View {
 
-     @ObservedObject var viewModel: ExportViewModel
+    @ObservedObject var viewModel: ExportViewModel
+    @State private var didCopyToClipBoard = false
 
     var body: some View {
         VStack {
@@ -22,9 +23,10 @@ struct ExportView: View {
                 .padding()
 
             Button(action: {
-                print("Should copy to clipboard")
+                UIPasteboard.general.string = self.viewModel.exportedData
+                self.didCopyToClipBoard = true
             }, label: {
-                Text("Copy to clipboard")
+                Text((self.didCopyToClipBoard ? "Copied !" : "Copy to clipboard"))
             })
                 .foregroundColor(.white)
                 .padding()
