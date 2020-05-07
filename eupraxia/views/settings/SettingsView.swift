@@ -30,7 +30,7 @@ struct SettingsView: View {
                     }
                 }
 
-                Section(header: Text("Import / export")) {
+                Section(header: Text("My data")) {
                     Button(action: {
                         self.showImportView.toggle()
                     }, label: {
@@ -54,19 +54,34 @@ struct SettingsView: View {
                     .sheet(isPresented: $showExportView) {
                         ExportView(viewModel: ExportViewModel(with: SurveysRepositoryImpl(with: self.context)))
                     }
+
+                    Button(action: {
+                        self.viewModel.deleteAllData()
+                    }, label: {
+                        Text("Delete all my data")
+                    })
+                    .foregroundColor(Color.red)
                 }
             }
             .navigationBarTitle("Settings")
             .listStyle(GroupedListStyle())
+            .alert(isPresented: $viewModel.shouldShowDidDeleteSuccessAlert) {
+                Alert(
+                    title: Text("Success"),
+                    message: Text("All of your data has been successfully deleted"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        let previewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        return NavigationView {
             SettingsView(
-                viewModel: SettingsViewModel(with: NotificationsManager(with: UNUserNotificationCenter.current()))
+                viewModel: SettingsViewModel(with: NotificationsManager(with: UNUserNotificationCenter.current()), surveysRepository: SurveysRepositoryImpl(with: previewContext))
             )
         }
     }
