@@ -13,25 +13,14 @@ final class ExportViewModel: ObservableObject {
     @Published var exportedData = "Exporting data ..."
 
     private let surveysRepository: SurveysRepository
+    private let exportManager = ExportManager()
 
     init(with surveysRepository: SurveysRepository) {
         self.surveysRepository = surveysRepository
-
-        self.exportedData = self.exportDataFromRepository()
     }
 
-    func exportDataFromRepository() -> String {
+    func exportData() {
         let surveys = self.surveysRepository.getSurveys()
-        let surveysJSON = try? JSONEncoder().encode(surveys)
-
-        guard let data = surveysJSON else {
-            return "An error occured please try again"
-        }
-
-        guard let stringSurveys = String(data: data, encoding: .utf8) else {
-            return "An error occured"
-        }
-
-        return stringSurveys
+        self.exportedData = self.exportManager.exportSurveysToString(surveys: surveys)
     }
 }

@@ -35,6 +35,9 @@ struct ExportView: View {
 
             Spacer()
         }
+        .onAppear {
+            self.viewModel.exportData()
+        }
     }
 }
 
