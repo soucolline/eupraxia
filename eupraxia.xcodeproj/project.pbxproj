@@ -19,6 +19,9 @@
 		E9316E5724643E1800C34381 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5624643E1800C34381 /* ExportView.swift */; };
 		E9316E5A24643F8300C34381 /* ExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5924643F8300C34381 /* ExportViewModel.swift */; };
 		E9316E5D2464454600C34381 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5C2464454600C34381 /* ExportManager.swift */; };
+		E9316E5F246447A000C34381 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5E246447A000C34381 /* ImportView.swift */; };
+		E9316E61246447E900C34381 /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E60246447E900C34381 /* ImportViewModel.swift */; };
+		E9316E63246449CC00C34381 /* ImportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E62246449CC00C34381 /* ImportManager.swift */; };
 		E949630B243D1471001C6A7E /* SurveysRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630A243D1471001C6A7E /* SurveysRepository.swift */; };
 		E949630D243D14E8001C6A7E /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630C243D14E8001C6A7E /* Survey.swift */; };
 		E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C224371EA900318C2B /* Model.xcdatamodeld */; };
@@ -64,6 +67,9 @@
 		E9316E5624643E1800C34381 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
 		E9316E5924643F8300C34381 /* ExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewModel.swift; sourceTree = "<group>"; };
 		E9316E5C2464454600C34381 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
+		E9316E5E246447A000C34381 /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+		E9316E60246447E900C34381 /* ImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewModel.swift; sourceTree = "<group>"; };
+		E9316E62246449CC00C34381 /* ImportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportManager.swift; sourceTree = "<group>"; };
 		E949630A243D1471001C6A7E /* SurveysRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysRepository.swift; sourceTree = "<group>"; };
 		E949630C243D14E8001C6A7E /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		E97AE2C324371EA900318C2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 				E9B33F192439210E00111B80 /* NotificationsManager.swift */,
 				E9B929D92439C9350010E542 /* Constants.swift */,
 				E9316E5C2464454600C34381 /* ExportManager.swift */,
+				E9316E62246449CC00C34381 /* ImportManager.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 			children = (
 				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
 				E9316E5624643E1800C34381 /* ExportView.swift */,
+				E9316E5E246447A000C34381 /* ImportView.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 			children = (
 				E9B33F1724391AA300111B80 /* SettingsViewModel.swift */,
 				E9316E5924643F8300C34381 /* ExportViewModel.swift */,
+				E9316E60246447E900C34381 /* ImportViewModel.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
 				E9BF7145243F4B6C007C639B /* ChoiceRow.swift in Sources */,
 				E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */,
+				E9316E63246449CC00C34381 /* ImportManager.swift in Sources */,
 				E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */,
 				E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */,
 				E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */,
@@ -371,6 +381,7 @@
 				E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */,
 				E9BF713F243F15B8007C639B /* HistoryViewModel.swift in Sources */,
 				E9316E5A24643F8300C34381 /* ExportViewModel.swift in Sources */,
+				E9316E5F246447A000C34381 /* ImportView.swift in Sources */,
 				E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */,
 				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
 				E9316E5724643E1800C34381 /* ExportView.swift in Sources */,
@@ -378,6 +389,7 @@
 				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
 				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
 				E949630D243D14E8001C6A7E /* Survey.swift in Sources */,
+				E9316E61246447E900C34381 /* ImportViewModel.swift in Sources */,
 				E9B929DC243A08EE0010E542 /* PainView.swift in Sources */,
 				E9316E5D2464454600C34381 /* ExportManager.swift in Sources */,
 				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,

@@ -8,8 +8,6 @@
 
 import Foundation
 
-protocol Exportable {}
-
 final class ExportManager {
 
     func exportSurveysToString(surveys: [Survey]) -> String {

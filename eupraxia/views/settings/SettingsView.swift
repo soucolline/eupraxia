@@ -12,6 +12,7 @@ struct SettingsView: View {
     @Environment(\.managedObjectContext) var context
     @ObservedObject var viewModel: SettingsViewModel
 
+    @State private var showImportView = false
     @State private var showExportView = false
 
     var body: some View {
@@ -31,10 +32,19 @@ struct SettingsView: View {
 
                 Section(header: Text("Import / export")) {
                     Button(action: {
-
+                        self.showImportView.toggle()
                     }, label: {
                         Text("Import data")
                     })
+                    .sheet(isPresented: $showImportView) {
+                        ImportView(
+                            viewModel: ImportViewModel(
+                                with: ImportManager(
+                                    with: SurveysRepositoryImpl(with: self.context)
+                                )
+                            )
+                        )
+                    }
 
                     Button(action: {
                         self.showExportView.toggle()
