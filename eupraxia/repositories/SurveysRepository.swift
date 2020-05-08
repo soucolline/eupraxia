@@ -12,11 +12,11 @@ import CoreData
 protocol SurveysRepository {
     func getSurveys() -> [Survey]
     func save(survey: Survey)
-    func update(survey: Survey)
-    func delete(survey: Survey)
+    func delete(survey: Survey, completion: @escaping () -> Void)
+    func deleteAllSurveys(completion: @escaping () -> Void)
 }
 
-class SurveysRepositoryImpl: SurveysRepository {
+class SurveysRepositoryImpl: SurveysRepository, ObservableObject {
 
     private let context: NSManagedObjectContext
 
@@ -48,12 +48,33 @@ class SurveysRepositoryImpl: SurveysRepository {
         }
     }
 
-    func update(survey: Survey) {
+    func delete(survey: Survey, completion: @escaping () -> Void) {
+        let request = NSFetchRequest<ManagedSurvey>(entityName: "ManagedSurvey")
+        request.predicate = NSPredicate(format: "id == %@",survey.id.uuidString)
 
+        do {
+            let result = try self.context.fetch(request)
+
+            for survey in result {
+                self.context.delete(survey)
+            }
+
+            completion()
+        } catch {
+            fatalError("Could not delete survey")
+        }
     }
 
-    func delete(survey: Survey) {
+    func deleteAllSurveys(completion: @escaping () -> Void) {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "ManagedSurvey")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
 
+        do {
+            try self.context.execute(deleteRequest)
+            completion()
+        } catch {
+            fatalError("Could not delete all surveys")
+        }
     }
 
     private func saveContext() {

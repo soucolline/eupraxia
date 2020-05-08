@@ -10,10 +10,14 @@ import Foundation
 
 final class SettingsViewModel: ObservableObject {
 
-    private let notificationManager: NotificationsManager
+    @Published var shouldShowDidDeleteSuccessAlert = false
 
-    init(with notificationManager: NotificationsManager) {
+    private let notificationManager: NotificationsManager
+    private let surveysRepository: SurveysRepository
+
+    init(with notificationManager: NotificationsManager, surveysRepository: SurveysRepository) {
         self.notificationManager = notificationManager
+        self.surveysRepository = surveysRepository
     }
 
     @Published var hasEnabledNotifications: Bool = UserDefaultsConfig.hasEnabledNotifications {
@@ -31,6 +35,12 @@ final class SettingsViewModel: ObservableObject {
         willSet(newValue) {
             UserDefaultsConfig.notificationTriggerTime = newValue
             self.notificationManager.setReminderNotification(to: newValue)
+        }
+    }
+
+    func deleteAllData() {
+        self.surveysRepository.deleteAllSurveys {
+            self.shouldShowDidDeleteSuccessAlert = true
         }
     }
 

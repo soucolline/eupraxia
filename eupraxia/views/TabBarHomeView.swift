@@ -26,7 +26,7 @@ struct TabBarHomeView: View {
                     Text("History")
                 }
 
-            SettingsView(viewModel: SettingsViewModel(with: NotificationsManager(with: UNUserNotificationCenter.current())))
+            SettingsView(viewModel: SettingsViewModel(with: NotificationsManager(with: UNUserNotificationCenter.current()), surveysRepository: SurveysRepositoryImpl(with: context)))
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")

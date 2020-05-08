@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E424376A85004BDD1F /* HistoryRow.swift */; };
 		E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */; };
 		E92FB1EB2437709E004BDD1F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92FB1EA2437709E004BDD1F /* Colors.xcassets */; };
+		E9316E5724643E1800C34381 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5624643E1800C34381 /* ExportView.swift */; };
+		E9316E5A24643F8300C34381 /* ExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5924643F8300C34381 /* ExportViewModel.swift */; };
+		E9316E5D2464454600C34381 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5C2464454600C34381 /* ExportManager.swift */; };
+		E9316E5F246447A000C34381 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E5E246447A000C34381 /* ImportView.swift */; };
+		E9316E61246447E900C34381 /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E60246447E900C34381 /* ImportViewModel.swift */; };
+		E9316E63246449CC00C34381 /* ImportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9316E62246449CC00C34381 /* ImportManager.swift */; };
 		E949630B243D1471001C6A7E /* SurveysRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630A243D1471001C6A7E /* SurveysRepository.swift */; };
 		E949630D243D14E8001C6A7E /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949630C243D14E8001C6A7E /* Survey.swift */; };
 		E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E97AE2C224371EA900318C2B /* Model.xcdatamodeld */; };
@@ -46,6 +52,11 @@
 		E9CC6C9224360FD300A85495 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */; };
 		E9CC6C9524360FD300A85495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9324360FD300A85495 /* LaunchScreen.storyboard */; };
 		E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6CA02436113800A85495 /* SurveyView.swift */; };
+		E9DE843124654E8900B94E85 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = E9DE843024654E8900B94E85 /* Valet */; };
+		E9DE843424654EEA00B94E85 /* DataEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843324654EEA00B94E85 /* DataEncryptor.swift */; };
+		E9DE8437246551DF00B94E85 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9DE8436246551DF00B94E85 /* CryptoSwift */; };
+		E9DE843B2465541100B94E85 /* SecretsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843A2465541100B94E85 /* SecretsHandler.swift */; };
+		E9DE843D246557B100B94E85 /* DataDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843C246557B100B94E85 /* DataDecryptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +69,12 @@
 		E92FB1E424376A85004BDD1F /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
 		E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowViewModel.swift; sourceTree = "<group>"; };
 		E92FB1EA2437709E004BDD1F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E9316E5624643E1800C34381 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		E9316E5924643F8300C34381 /* ExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewModel.swift; sourceTree = "<group>"; };
+		E9316E5C2464454600C34381 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
+		E9316E5E246447A000C34381 /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+		E9316E60246447E900C34381 /* ImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewModel.swift; sourceTree = "<group>"; };
+		E9316E62246449CC00C34381 /* ImportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportManager.swift; sourceTree = "<group>"; };
 		E949630A243D1471001C6A7E /* SurveysRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysRepository.swift; sourceTree = "<group>"; };
 		E949630C243D14E8001C6A7E /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		E97AE2C324371EA900318C2B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -90,6 +107,9 @@
 		E9CC6C9424360FD300A85495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9CC6C9624360FD300A85495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CC6CA02436113800A85495 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		E9DE843324654EEA00B94E85 /* DataEncryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptor.swift; sourceTree = "<group>"; };
+		E9DE843A2465541100B94E85 /* SecretsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsHandler.swift; sourceTree = "<group>"; };
+		E9DE843C246557B100B94E85 /* DataDecryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecryptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DE843124654E8900B94E85 /* Valet in Frameworks */,
+				E9DE8437246551DF00B94E85 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,13 +128,36 @@
 		E920F173243653F800F27BA3 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				E9DE843224654ED400B94E85 /* crypto */,
 				E920F1742436544000F27BA3 /* UtilsExtensions.swift */,
 				E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */,
 				E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */,
 				E9B33F192439210E00111B80 /* NotificationsManager.swift */,
 				E9B929D92439C9350010E542 /* Constants.swift */,
+				E9316E5C2464454600C34381 /* ExportManager.swift */,
+				E9316E62246449CC00C34381 /* ImportManager.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		E9316E5324643DFD00C34381 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
+				E9316E5624643E1800C34381 /* ExportView.swift */,
+				E9316E5E246447A000C34381 /* ImportView.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		E9316E5824643F6C00C34381 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				E9B33F1724391AA300111B80 /* SettingsViewModel.swift */,
+				E9316E5924643F8300C34381 /* ExportViewModel.swift */,
+				E9316E60246447E900C34381 /* ImportViewModel.swift */,
+			);
+			path = settings;
 			sourceTree = "<group>";
 		};
 		E9496307243D143B001C6A7E /* repositories */ = {
@@ -192,13 +237,13 @@
 		E9CC6C9C2436101000A85495 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E9316E5324643DFD00C34381 /* settings */,
 				E9BF7141243F4B3E007C639B /* tableview */,
 				E9CC6CA02436113800A85495 /* SurveyView.swift */,
 				E97AE2C924372AE200318C2B /* TabBarHomeView.swift */,
 				E92FB1E224373284004BDD1F /* HistoryView.swift */,
 				E92FB1E424376A85004BDD1F /* HistoryRow.swift */,
 				E9B5A24F24388E3900904AA4 /* DetailsView.swift */,
-				E9B33F0F2439121D00111B80 /* SettingsView.swift */,
 				E9B929DB243A08EE0010E542 /* PainView.swift */,
 			);
 			path = views;
@@ -207,12 +252,12 @@
 		E9CC6C9D2436101900A85495 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E9316E5824643F6C00C34381 /* settings */,
 				E9BF714A243F55CE007C639B /* tableview */,
 				E920F16F243648A900F27BA3 /* SurveyViewModel.swift */,
 				E9BF713E243F15B8007C639B /* HistoryViewModel.swift */,
 				E92FB1E824376C2D004BDD1F /* HistoryRowViewModel.swift */,
 				E9B5A25124388E7200904AA4 /* DetailsViewModel.swift */,
-				E9B33F1724391AA300111B80 /* SettingsViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -246,6 +291,16 @@
 			path = supportingFiles;
 			sourceTree = "<group>";
 		};
+		E9DE843224654ED400B94E85 /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				E9DE843324654EEA00B94E85 /* DataEncryptor.swift */,
+				E9DE843C246557B100B94E85 /* DataDecryptor.swift */,
+				E9DE843A2465541100B94E85 /* SecretsHandler.swift */,
+			);
+			path = crypto;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +317,10 @@
 			dependencies = (
 			);
 			name = eupraxia;
+			packageProductDependencies = (
+				E9DE843024654E8900B94E85 /* Valet */,
+				E9DE8436246551DF00B94E85 /* CryptoSwift */,
+			);
 			productName = eupraxia;
 			productReference = E9CC6C8524360FD200A85495 /* Eupraxia.app */;
 			productType = "com.apple.product-type.application";
@@ -290,6 +349,10 @@
 				Base,
 			);
 			mainGroup = E9CC6C7C24360FD200A85495;
+			packageReferences = (
+				E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */,
+				E9DE8435246551DF00B94E85 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = E9CC6C8624360FD200A85495 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,11 +389,14 @@
 				E949630B243D1471001C6A7E /* SurveysRepository.swift in Sources */,
 				E9BF7149243F50A4007C639B /* ToggleRow.swift in Sources */,
 				E9BF714E243F55EE007C639B /* ToggleRowViewModel.swift in Sources */,
+				E9DE843D246557B100B94E85 /* DataDecryptor.swift in Sources */,
 				E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */,
 				E9B929DA2439C9350010E542 /* Constants.swift in Sources */,
 				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
 				E9BF7145243F4B6C007C639B /* ChoiceRow.swift in Sources */,
 				E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */,
+				E9DE843424654EEA00B94E85 /* DataEncryptor.swift in Sources */,
+				E9316E63246449CC00C34381 /* ImportManager.swift in Sources */,
 				E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */,
 				E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */,
 				E9B33F14243916AB00111B80 /* UserDefaultsPropertyWrapper.swift in Sources */,
@@ -345,13 +411,19 @@
 				E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */,
 				E97AE2CA24372AE200318C2B /* TabBarHomeView.swift in Sources */,
 				E9BF713F243F15B8007C639B /* HistoryViewModel.swift in Sources */,
+				E9316E5A24643F8300C34381 /* ExportViewModel.swift in Sources */,
+				E9316E5F246447A000C34381 /* ImportView.swift in Sources */,
 				E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */,
 				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
+				E9DE843B2465541100B94E85 /* SecretsHandler.swift in Sources */,
+				E9316E5724643E1800C34381 /* ExportView.swift in Sources */,
 				E9BF7152243FC10B007C639B /* SeparatorView.swift in Sources */,
 				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
 				E920F1752436544000F27BA3 /* UtilsExtensions.swift in Sources */,
 				E949630D243D14E8001C6A7E /* Survey.swift in Sources */,
+				E9316E61246447E900C34381 /* ImportViewModel.swift in Sources */,
 				E9B929DC243A08EE0010E542 /* PainView.swift in Sources */,
+				E9316E5D2464454600C34381 /* ExportManager.swift in Sources */,
 				E920F16C24361F5B00F27BA3 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +622,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Valet";
+			requirement = {
+				kind = exactVersion;
+				version = 3.2.8;
+			};
+		};
+		E9DE8435246551DF00B94E85 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 1.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9DE843024654E8900B94E85 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+		E9DE8436246551DF00B94E85 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9DE8435246551DF00B94E85 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E97AE2C224371EA900318C2B /* Model.xcdatamodeld */ = {

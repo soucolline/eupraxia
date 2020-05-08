@@ -10,7 +10,7 @@ import Foundation
 
 final class DetailsViewModel: ObservableObject {
 
-    private let survey: Survey
+    var survey: Survey
 
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
