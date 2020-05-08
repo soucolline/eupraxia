@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -52,6 +52,8 @@
 		E9CC6C9224360FD300A85495 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9124360FD300A85495 /* Preview Assets.xcassets */; };
 		E9CC6C9524360FD300A85495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC6C9324360FD300A85495 /* LaunchScreen.storyboard */; };
 		E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6CA02436113800A85495 /* SurveyView.swift */; };
+		E9DE843124654E8900B94E85 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = E9DE843024654E8900B94E85 /* Valet */; };
+		E9DE843424654EEA00B94E85 /* DataEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843324654EEA00B94E85 /* DataEncryptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,7 @@
 		E9CC6C9424360FD300A85495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9CC6C9624360FD300A85495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CC6CA02436113800A85495 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		E9DE843324654EEA00B94E85 /* DataEncryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DE843124654E8900B94E85 /* Valet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +122,7 @@
 		E920F173243653F800F27BA3 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				E9DE843224654ED400B94E85 /* crypto */,
 				E920F1742436544000F27BA3 /* UtilsExtensions.swift */,
 				E9B33F13243916AB00111B80 /* UserDefaultsPropertyWrapper.swift */,
 				E9B33F15243916C400111B80 /* UserDefaultsConfig.swift */,
@@ -280,6 +285,14 @@
 			path = supportingFiles;
 			sourceTree = "<group>";
 		};
+		E9DE843224654ED400B94E85 /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				E9DE843324654EEA00B94E85 /* DataEncryptor.swift */,
+			);
+			path = crypto;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,6 +309,9 @@
 			dependencies = (
 			);
 			name = eupraxia;
+			packageProductDependencies = (
+				E9DE843024654E8900B94E85 /* Valet */,
+			);
 			productName = eupraxia;
 			productReference = E9CC6C8524360FD200A85495 /* Eupraxia.app */;
 			productType = "com.apple.product-type.application";
@@ -324,6 +340,9 @@
 				Base,
 			);
 			mainGroup = E9CC6C7C24360FD200A85495;
+			packageReferences = (
+				E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */,
+			);
 			productRefGroup = E9CC6C8624360FD200A85495 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,6 +384,7 @@
 				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,
 				E9BF7145243F4B6C007C639B /* ChoiceRow.swift in Sources */,
 				E92FB1E324373284004BDD1F /* HistoryView.swift in Sources */,
+				E9DE843424654EEA00B94E85 /* DataEncryptor.swift in Sources */,
 				E9316E63246449CC00C34381 /* ImportManager.swift in Sources */,
 				E9B5A25224388E7200904AA4 /* DetailsViewModel.swift in Sources */,
 				E92FB1E524376A85004BDD1F /* HistoryRow.swift in Sources */,
@@ -590,6 +610,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Valet";
+			requirement = {
+				kind = exactVersion;
+				version = 3.2.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9DE843024654E8900B94E85 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E97AE2C224371EA900318C2B /* Model.xcdatamodeld */ = {
