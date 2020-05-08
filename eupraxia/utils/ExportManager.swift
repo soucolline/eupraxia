@@ -23,7 +23,11 @@ final class ExportManager {
             return "An error occured, please try again"
         }
 
-        return self.encryptor.encrypt(data: stringSurveys)
+        guard let encryptedStringSurveys = try? self.encryptor.encrypt(data: stringSurveys) else {
+            return "An error occured, please try again"
+        }
+
+        return encryptedStringSurveys
     }
 
 }

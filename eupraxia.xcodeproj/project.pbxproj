@@ -54,6 +54,8 @@
 		E9CC6CA12436113800A85495 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6CA02436113800A85495 /* SurveyView.swift */; };
 		E9DE843124654E8900B94E85 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = E9DE843024654E8900B94E85 /* Valet */; };
 		E9DE843424654EEA00B94E85 /* DataEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843324654EEA00B94E85 /* DataEncryptor.swift */; };
+		E9DE8437246551DF00B94E85 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9DE8436246551DF00B94E85 /* CryptoSwift */; };
+		E9DE843B2465541100B94E85 /* SecretsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843A2465541100B94E85 /* SecretsHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,7 @@
 		E9CC6C9624360FD300A85495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CC6CA02436113800A85495 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		E9DE843324654EEA00B94E85 /* DataEncryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptor.swift; sourceTree = "<group>"; };
+		E9DE843A2465541100B94E85 /* SecretsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9DE843124654E8900B94E85 /* Valet in Frameworks */,
+				E9DE8437246551DF00B94E85 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				E9DE843324654EEA00B94E85 /* DataEncryptor.swift */,
+				E9DE843A2465541100B94E85 /* SecretsHandler.swift */,
 			);
 			path = crypto;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			name = eupraxia;
 			packageProductDependencies = (
 				E9DE843024654E8900B94E85 /* Valet */,
+				E9DE8436246551DF00B94E85 /* CryptoSwift */,
 			);
 			productName = eupraxia;
 			productReference = E9CC6C8524360FD200A85495 /* Eupraxia.app */;
@@ -342,6 +348,7 @@
 			mainGroup = E9CC6C7C24360FD200A85495;
 			packageReferences = (
 				E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */,
+				E9DE8435246551DF00B94E85 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = E9CC6C8624360FD200A85495 /* Products */;
 			projectDirPath = "";
@@ -404,6 +411,7 @@
 				E9316E5F246447A000C34381 /* ImportView.swift in Sources */,
 				E9B33F1824391AA300111B80 /* SettingsViewModel.swift in Sources */,
 				E9B5A25024388E3900904AA4 /* DetailsView.swift in Sources */,
+				E9DE843B2465541100B94E85 /* SecretsHandler.swift in Sources */,
 				E9316E5724643E1800C34381 /* ExportView.swift in Sources */,
 				E9BF7152243FC10B007C639B /* SeparatorView.swift in Sources */,
 				E97AE2C424371EA900318C2B /* Model.xcdatamodeld in Sources */,
@@ -620,6 +628,14 @@
 				version = 3.2.8;
 			};
 		};
+		E9DE8435246551DF00B94E85 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 1.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -627,6 +643,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9DE842F24654E8900B94E85 /* XCRemoteSwiftPackageReference "Valet" */;
 			productName = Valet;
+		};
+		E9DE8436246551DF00B94E85 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9DE8435246551DF00B94E85 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -7,44 +7,27 @@
 //
 
 import Foundation
-import Valet
+import CryptoSwift
+
+enum EncryptionError: Error {
+    case couldNotEncrypt
+}
 
 final class DataEncryptor {
 
-    private let valet = Valet.valet(with: Identifier(nonEmpty: "eupraxia")!, accessibility: .whenUnlockedThisDeviceOnly)
+    private let secretsHandler = SecretsHandler()
 
-    func encrypt(data: String) -> String {
-        let key = self.getPrivateKey()
-        let iv = self.getIVKey()
+    func encrypt(data: String) throws -> String {
+        let key = self.secretsHandler.getPrivateKey()
+        let iv = self.secretsHandler.getIVKey()
 
-        print(key)
-        print(iv)
-        return "toto"
-    }
+        do {
+            let aes = try AES(key: key, iv: iv)
+            let encryptedText = try aes.encrypt(Array(data.utf8))
 
-    private func getPrivateKey() -> String {
-        let key = self.valet.string(forKey: Const.key)
-
-        if key == nil {
-            let newKey = String.randomString(length: 32)
-            self.valet.set(string: newKey, forKey: Const.key)
-
-            return newKey
+            return encryptedText.toHexString()
+        } catch {
+            throw EncryptionError.couldNotEncrypt
         }
-
-        return key!
     }
-
-    private func getIVKey() -> String {
-        let newIVKey = String.randomString(length: 32)
-        self.valet.set(string: newIVKey, forKey: Const.iv)
-
-        return newIVKey
-    }
-
-    private struct Const {
-        static let key = "key_key"
-        static let iv = "iv_key"
-    }
-
 }
