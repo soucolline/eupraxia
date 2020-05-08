@@ -27,10 +27,12 @@ final class SecretsHandler {
     }
 
     func getIVKey() -> String {
+        self.valet.string(forKey: Const.iv)!
+    }
+
+    func generateNewIVKey() {
         let newIVKey = String.randomString(length: 16)
         self.valet.set(string: newIVKey, forKey: Const.iv)
-
-        return newIVKey
     }
 
     private struct Const {

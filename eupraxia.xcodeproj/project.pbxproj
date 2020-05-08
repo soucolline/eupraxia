@@ -56,6 +56,7 @@
 		E9DE843424654EEA00B94E85 /* DataEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843324654EEA00B94E85 /* DataEncryptor.swift */; };
 		E9DE8437246551DF00B94E85 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9DE8436246551DF00B94E85 /* CryptoSwift */; };
 		E9DE843B2465541100B94E85 /* SecretsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843A2465541100B94E85 /* SecretsHandler.swift */; };
+		E9DE843D246557B100B94E85 /* DataDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE843C246557B100B94E85 /* DataDecryptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		E9CC6CA02436113800A85495 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		E9DE843324654EEA00B94E85 /* DataEncryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptor.swift; sourceTree = "<group>"; };
 		E9DE843A2465541100B94E85 /* SecretsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsHandler.swift; sourceTree = "<group>"; };
+		E9DE843C246557B100B94E85 /* DataDecryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecryptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				E9DE843324654EEA00B94E85 /* DataEncryptor.swift */,
+				E9DE843C246557B100B94E85 /* DataDecryptor.swift */,
 				E9DE843A2465541100B94E85 /* SecretsHandler.swift */,
 			);
 			path = crypto;
@@ -386,6 +389,7 @@
 				E949630B243D1471001C6A7E /* SurveysRepository.swift in Sources */,
 				E9BF7149243F50A4007C639B /* ToggleRow.swift in Sources */,
 				E9BF714E243F55EE007C639B /* ToggleRowViewModel.swift in Sources */,
+				E9DE843D246557B100B94E85 /* DataDecryptor.swift in Sources */,
 				E92FB1E924376C2D004BDD1F /* HistoryRowViewModel.swift in Sources */,
 				E9B929DA2439C9350010E542 /* Constants.swift in Sources */,
 				E920F170243648A900F27BA3 /* SurveyViewModel.swift in Sources */,

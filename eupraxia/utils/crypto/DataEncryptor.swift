@@ -18,6 +18,7 @@ final class DataEncryptor {
     private let secretsHandler = SecretsHandler()
 
     func encrypt(data: String) throws -> String {
+        self.secretsHandler.generateNewIVKey()
         let key = self.secretsHandler.getPrivateKey()
         let iv = self.secretsHandler.getIVKey()
 

@@ -11,13 +11,19 @@ import Foundation
 final class ImportManager {
 
     private let surveysRepository: SurveysRepository
+    private let decryptor = DataDecryptor()
 
     init(with surveysRepository: SurveysRepository) {
         self.surveysRepository = surveysRepository
     }
 
     func importDataFromString(data: String, completion: @escaping (Bool) -> Void) {
-        guard let data = data.data(using: .utf8) else {
+        guard let decryptedData = try? self.decryptor.decrypt(data: data) else {
+            completion(false)
+            return
+        }
+
+        guard let data = decryptedData.data(using: .utf8) else {
             completion(false)
             return
         }
