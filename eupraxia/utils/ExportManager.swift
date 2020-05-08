@@ -10,6 +10,8 @@ import Foundation
 
 final class ExportManager {
 
+    private let encryptor = DataEncryptor()
+
     func exportSurveysToString(surveys: [Survey]) -> String {
         let surveysJSON = try? JSONEncoder().encode(surveys)
 
@@ -21,7 +23,11 @@ final class ExportManager {
             return "An error occured, please try again"
         }
 
-        return stringSurveys
+        guard let encryptedStringSurveys = try? self.encryptor.encrypt(data: stringSurveys) else {
+            return "An error occured, please try again"
+        }
+
+        return encryptedStringSurveys
     }
 
 }
