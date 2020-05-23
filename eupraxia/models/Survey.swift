@@ -19,4 +19,5 @@ struct Survey: Codable {
     let hadStomachAche: Bool
     let weather: Weather
     let work: Work
+    let extraNotes: String?
 }

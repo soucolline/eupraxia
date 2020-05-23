@@ -28,6 +28,8 @@ final class SurveyViewModel: ObservableObject {
     @Published var didEatLunch = false
     @Published var didHaveSex = false
     @Published var didHaveStomachAche = false
+    @Published var didHaveExtraNotes = false
+    @Published var extraNotes = ""
 
     @Published var breakfastFood = ""
     @Published var lunchFood = ""
@@ -56,7 +58,8 @@ final class SurveyViewModel: ObservableObject {
             hadSex: self.didHaveSex,
             hadStomachAche: self.didHaveStomachAche,
             weather: self.weather[self.selectedWeather],
-            work: self.work[self.selectedWork]
+            work: self.work[self.selectedWork],
+            extraNotes: self.extraNotes.nilIfEmpty()
         )
 
         self.surveysRepository.save(survey: survey)
@@ -74,9 +77,11 @@ final class SurveyViewModel: ObservableObject {
         self.didEatLunch = false
         self.didHaveSex = false
         self.didHaveStomachAche = false
+        self.didHaveExtraNotes = false
         self.breakfastFood = ""
         self.lunchFood = ""
         self.dinnerFood = ""
+        self.extraNotes = ""
     }
     
 }

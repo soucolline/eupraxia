@@ -37,6 +37,9 @@ struct DetailsView: View {
 
                     HeaderRow(text: "Sex")
                     ToggleRow(viewModel: ToggleRowViewModel(text: "Did you have sex today", details: nil, value: viewModel.didHaveSex()))
+
+                    HeaderRow(text: "Extra")
+                    ToggleRow(viewModel: ToggleRowViewModel(text: "Extra notes to add context", details: viewModel.getExtraNotes(), value: viewModel.getExtraNotes().isNotNil()))
                 }
 
                 HStack(alignment: .center, spacing: 20) {
