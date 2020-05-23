@@ -26,6 +26,7 @@ public class ManagedSurvey: NSManagedObject {
     @NSManaged public var hadStomachAche: Bool
     @NSManaged public var weather: Int16
     @NSManaged public var work: Int16
+    @NSManaged public var extraNotes: String?
 
     init(
         from survey: Survey,
@@ -42,6 +43,7 @@ public class ManagedSurvey: NSManagedObject {
         self.breakfast = survey.breakfast
         self.lunch = survey.lunch
         self.dinner = survey.dinner
+        self.extraNotes = survey.extraNotes
     }
 
     public override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
@@ -61,7 +63,8 @@ extension ManagedSurvey {
             hadSex: hadSex,
             hadStomachAche: hadStomachAche,
             weather: Weather(rawValue: weather)!,
-            work: Work(rawValue: work)!
+            work: Work(rawValue: work)!,
+            extraNotes: extraNotes
         )
     }
 }

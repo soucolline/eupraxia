@@ -74,6 +74,14 @@ struct SurveyView: View {
                     Toggle(isOn: $viewModel.didHaveStomachAche) {
                         Text("Did you have a stomach ache today ?")
                     }
+
+                    Toggle(isOn: $viewModel.didHaveExtraNotes) {
+                        Text("Extra notes")
+                    }
+
+                    if self.viewModel.didHaveExtraNotes {
+                        TextField("Extra notes to add some context", text: $viewModel.extraNotes)
+                    }
                 }
 
                 Section {

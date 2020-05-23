@@ -58,6 +58,10 @@ final class DetailsViewModel: ObservableObject {
         self.survey.hadStomachAche ? "Yes" : "No"
     }
 
+    func getExtraNotes() -> String? {
+        self.survey.extraNotes
+    }
+
     func getFeelingIcon() -> String {
         switch self.survey.feeling {
         case .veryBad: return K.Icons.moodVeryBad
