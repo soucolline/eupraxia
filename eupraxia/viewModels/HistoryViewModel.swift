@@ -21,7 +21,11 @@ final class HistoryViewModel: ObservableObject {
     }
 
     func getSurveys() {
-        self.surveys = self.surveysRepository.getSurveys()
+        self.surveys = self.surveysRepository
+            .getSurveys()
+            .sorted(by: { survey1, survey2 in
+                survey1.date > survey2.date
+            })
     }
 
     func getSubtitle() -> String {
