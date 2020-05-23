@@ -60,6 +60,23 @@ final class SurveyViewModel: ObservableObject {
         )
 
         self.surveysRepository.save(survey: survey)
+
+        self.resetSurveyOnSubmit()
+    }
+
+    private func resetSurveyOnSubmit() {
+        self.surveyDate = Date()
+        self.selectedFeeling = -1
+        self.selectedWeather = -1
+        self.selectedWork = -1
+        self.didEatBreakfast = false
+        self.didEatDinner = false
+        self.didEatLunch = false
+        self.didHaveSex = false
+        self.didHaveStomachAche = false
+        self.breakfastFood = ""
+        self.lunchFood = ""
+        self.dinnerFood = ""
     }
     
 }
